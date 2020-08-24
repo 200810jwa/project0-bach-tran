@@ -481,3 +481,25 @@
 2020-08-23 19:39:04 INFO  LoginService:62 - employee logged in successfully
 2020-08-23 19:39:09 INFO  BankAccountApplicationsService:118 - Employee employee successfully approved account ID 4 for user employee
 2020-08-23 19:39:17 INFO  LoginService:62 - employee logged in successfully
+2020-08-23 19:48:29 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-23 19:48:49 ERROR MainMenu:47 - bach_tran is not authorized for loginType Admin
+2020-08-23 19:48:53 INFO  LoginService:62 - admin logged in successfully
+2020-08-23 20:05:57 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-23 20:15:32 INFO  LoginService:62 - admin logged in successfully
+2020-08-23 21:16:14 INFO  LoginService:62 - admin logged in successfully
+2020-08-23 21:18:12 INFO  LoginService:62 - admin logged in successfully
+2020-08-23 21:18:35 INFO  LoginService:62 - john_tran logged in successfully
+2020-08-23 21:18:53 INFO  LoginService:62 - admin logged in successfully
+2020-08-23 21:20:52 INFO  LoginService:62 - john_tran logged in successfully
+2020-08-23 21:21:04 INFO  BankAccountApplicationsService:48 - User john_tran has applied for a bank account
+2020-08-23 21:21:13 INFO  LoginService:62 - admin logged in successfully
+2020-08-23 21:21:25 INFO  BankAccountApplicationsService:118 - Admin admin successfully approved account ID 5 for user john_tran
+2020-08-23 21:21:41 INFO  AccountManagementService:129 - Admin admin successfully deposited 1000.0 to accountID 5
+2020-08-23 21:22:03 INFO  AccountManagementService:140 - Admin admin successfully withdrew 3500.0 from accountID 1
+2020-08-23 21:22:08 INFO  AccountManagementService:69 - Admin admin successfully canceled account 1
+2020-08-23 21:23:17 INFO  LoginService:62 - admin logged in successfully
+2020-08-23 21:23:25 INFO  AccountManagementService:129 - Admin admin successfully deposited 1000.0 to accountID 2
+2020-08-23 21:23:33 INFO  AccountManagementService:129 - Admin admin successfully deposited 1000.0 to accountID 5
+2020-08-23 21:23:56 INFO  AccountManagementService:139 - Admin admin successfully withdrew 1000.0 from accountID 2
+2020-08-23 21:24:02 INFO  AccountManagementService:139 - Admin admin successfully withdrew 1000.0 from accountID 5
+2020-08-23 21:24:45 INFO  AccountManagementService:151 - Admin admin successfully transferred 1750.0 from accountID 2 to accountID 5

@@ -38,9 +38,10 @@ public class AdminMainMenu extends Menu {
 			try {
 				new AccountManagementService(new BankAccountDAO(), "CancelAccount", "Admin").execute();
 			} catch (MoneyManagementException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
+				log.error(e1.getMessage());
+				System.out.println("Unable to cancel account");
 			}
+			getState().displayCurrentMenu();
 			break;
 		case 2:
 			System.out.println("Please indicate whether you would like to view, deposit, withdraw, or transfer:");

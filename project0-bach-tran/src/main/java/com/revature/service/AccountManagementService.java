@@ -2,6 +2,7 @@ package com.revature.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
@@ -35,7 +36,44 @@ public class AccountManagementService implements Service {
 		List<BankAccount> listApprovedAccountsUser = getApprovedAccountsUser(state.getCurrentUser().getId(), loginType);
 		state.setApprovedAccountsUser(listApprovedAccountsUser);
 		
-		if (executeType.startsWith("ManageMoney")) {
+		if (executeType.equals("CancelAccount")) {
+			List<BankAccount> cancelableAccounts = getCancelableAccounts();
+			
+			int accountCounter = 0;
+			System.out.println("====CANCELABLE ACCOUNTS====");
+			for (BankAccount b : cancelableAccounts) {
+				accountCounter++;
+				System.out.print(accountCounter + ".) ");
+				System.out.println("Account ID: " + b.getId());
+				System.out.println("Balance: " + b.getBalance());
+				System.out.println();
+			}
+			
+			while(true) {
+				System.out.println("Please select an account to cancel: (or type back to go back)");
+				int choice = -1;
+				try {
+					if (scanner.hasNextInt()) {
+						choice = scanner.nextInt();
+					}
+					
+					if (scanner.nextLine().equals("back")) {
+						break;
+					}
+					
+					if (choice < 1 || choice > cancelableAccounts.size()) {
+						throw new InputMismatchException();
+					} else {
+						int cancelableAccountId = cancelableAccounts.get(choice - 1).getId();
+						cancelAccount(cancelableAccountId);
+						log.info(state.getCurrentUser().getAccountType() + " " + 
+						state.getCurrentUser().getUsername() + " successfully canceled account " + cancelableAccountId);
+					}
+				} catch (InputMismatchException e) {
+					System.out.println("Invalid input, please try again.");
+				}
+			}
+		} else if (executeType.startsWith("ManageMoney")) {
 			String operationType;
 			if (executeType.endsWith("deposit")) {
 				operationType = "deposit";
@@ -90,7 +128,6 @@ public class AccountManagementService implements Service {
 							if (deposit(accountID, depositAmount)) {
 								log.info(state.getCurrentUser().getAccountType() + " " + state.getCurrentUser().getUsername() + " successfully deposited " +
 										depositAmount + " to accountID " + accountID);
-								break;
 							} else {
 								throw new MoneyManagementException(state.getCurrentUser().getUsername() + 
 										" failed to deposit " + depositAmount + " to accountID " + accountID);
@@ -101,7 +138,6 @@ public class AccountManagementService implements Service {
 							if (withdraw(accountID, withdrawAmount)) {
 								log.info(state.getCurrentUser().getAccountType() + " " + state.getCurrentUser().getUsername() + " successfully withdrew " +
 										withdrawAmount + " from accountID " + accountID);
-								break;
 							} else {
 								throw new MoneyManagementException(state.getCurrentUser().getUsername() +
 										" failed to withdraw " + withdrawAmount + " from accountID " + accountID);
@@ -114,7 +150,6 @@ public class AccountManagementService implements Service {
 							if (transfer(accountID, targetAccountID, transferAmount)) {
 								log.info(state.getCurrentUser().getAccountType() + " " + state.getCurrentUser().getUsername() + " successfully transferred " +
 										transferAmount + " from accountID " + accountID + " to accountID " + targetAccountID);
-								break;
 							} else {
 								throw new MoneyManagementException(state.getCurrentUser().getUsername() + " failed to transfer " 
 										+ transferAmount + " from accountID " + accountID + " to accountID " + targetAccountID);
@@ -131,7 +166,45 @@ public class AccountManagementService implements Service {
 		}
 	}
 	
-	// Testable methods
+	public boolean cancelAccount(int accountId) throws MoneyManagementException {
+		int result = 0;
+		Connection con = ConnectionUtility.getConnection();
+		dao.setConnection(con);
+		
+		try {
+			result = dao.deleteAccount(accountId);
+		} catch (SQLException e) {
+			throw new MoneyManagementException("Unable to delete accountID " + accountId, e);
+		}
+		
+		if (result == 1) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public List<BankAccount> getCancelableAccounts() throws MoneyManagementException {
+		List<BankAccount> list;
+		Connection con = ConnectionUtility.getConnection();
+		dao.setConnection(con);
+		
+		try {
+			list = dao.getEmptyApprovedAccounts();
+		} catch (SQLException e) {
+			throw new MoneyManagementException("Unable to retrieve cancelable accounts", e);
+		} finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				System.out.println("Unable to close connection!");
+				e.printStackTrace();
+			}
+		}
+		
+		return list;
+	}
+
 	public boolean deposit(int accountId, double amount) throws SQLException {
 		if (amount <= 0) {
 			return false;
@@ -168,7 +241,7 @@ public class AccountManagementService implements Service {
 		dao.setConnection(con);
 		
 		try {
-			if (state.getCurrentUser().getAccountType().equals("Admin") && loginType.equals("Admin")) {
+			if (loginType.equals("Admin")) {
 				listApprovedAccountsUser = dao.getAllApprovedAccounts();
 			} else {
 				listApprovedAccountsUser = dao.getApprovedAccountsByUserId(userId);

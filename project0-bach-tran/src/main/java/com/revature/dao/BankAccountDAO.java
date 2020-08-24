@@ -468,5 +468,47 @@ public class BankAccountDAO {
 			return false;
 		}
 	}
+
+	public List<BankAccount> getEmptyApprovedAccounts() throws SQLException {
+		PreparedStatement stmt;
+		
+		String sql = "SELECT DISTINCT " + 
+				"b.id, b.balance, c.approved, c.pending FROM " + 
+				"(SELECT * FROM users u " + 
+				"LEFT JOIN user_account_join j " + 
+				"ON u.id = j.user_id " + 
+				"WHERE approved = true AND pending = false) c " + 
+				"LEFT JOIN bankaccounts b " + 
+				"ON c.account_id = b.id "
+				+ "WHERE b.balance = 0";
+		
+		stmt = con.prepareCall(sql);
+		
+		ResultSet rs = stmt.executeQuery();
+		ArrayList<BankAccount> list = new ArrayList<>();
+		while (rs.next()) {
+			int accountId = rs.getInt(1);
+			double balance = rs.getDouble(2);
+			boolean approved = rs.getBoolean(3);
+			boolean pending = rs.getBoolean(4);
+			
+			BankAccount account = new BankAccount(accountId, balance, approved, pending);
+			list.add(account);
+		}
+		
+		return list;
+	}
+
+	public int deleteAccount(int accountId) throws SQLException {
+		PreparedStatement stmt;
+		
+		String sql = "DELETE FROM bankaccounts "
+				+ "WHERE id = ?";
+		
+		stmt = con.prepareStatement(sql);
+		stmt.setInt(1, accountId);
+		
+		return stmt.executeUpdate();
+	}
 	
 }

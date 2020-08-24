@@ -22,14 +22,6 @@ public class BankAccountApplicationsServiceTest {
 	BankAccountDAO dao = mock(BankAccountDAO.class);
 	BankAccountApplicationsService service;
 
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
-
 	@Test
 	public void testHasPendingApplication() throws SQLException, BankAccountApplyException {
 		service = new BankAccountApplicationsService(dao, "");
