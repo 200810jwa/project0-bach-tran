@@ -1,0 +1,483 @@
+2020-08-18 10:18:32 ERROR CustomerRegistrationLoginMenu:53 - An error occurred when attempting to insert user bach_tran into database
+2020-08-18 10:32:12 ERROR CustomerRegistrationLoginMenu:53 - bach_tran username already exists!
+2020-08-18 10:32:23 ERROR CustomerRegistrationLoginMenu:42 - Login attempt for user bach_tran failed.
+2020-08-18 10:32:28 ERROR CustomerRegistrationLoginMenu:42 - Login attempt for user bach_tran failed.
+2020-08-18 10:38:30 ERROR CustomerRegistrationLoginMenu:53 - bach_tran username already exists!
+2020-08-18 10:40:00 ERROR CustomerRegistrationLoginMenu:42 - Login attempt for user bach_tran failed.
+2020-08-18 10:45:56 ERROR CustomerRegistrationLoginMenu:42 - Username bdfsd does not exist!
+2020-08-18 10:46:16 ERROR CustomerRegistrationLoginMenu:42 - Login attempt for user john_doe failed.
+2020-08-18 10:55:02 ERROR CustomerRegistrationLoginMenu:37 - Username ddf does not exist!
+2020-08-18 10:55:07 ERROR CustomerRegistrationLoginMenu:46 - Username dfd does not exist!
+2020-08-18 11:35:53 ERROR CustomerRegistrationLoginMenu:42 - An error occurred when attempting to perform database operations during login for username jane_doe
+2020-08-18 11:36:35 INFO  LoginService:45 - jane_doe logged in successfully
+2020-08-18 11:36:51 ERROR CustomerRegistrationLoginMenu:42 - Login attempt for user admin failed.
+2020-08-18 11:37:06 INFO  LoginService:45 - admin logged in successfully
+2020-08-18 11:43:42 INFO  LoginService:45 - employee_test logged in successfully
+2020-08-18 11:45:20 INFO  LoginService:45 - jane_doe logged in successfully
+2020-08-18 12:47:21 INFO  LoginService:45 - employee_test logged in successfully
+2020-08-18 12:47:36 INFO  LoginService:45 - employee_test logged in successfully
+2020-08-18 12:47:48 INFO  LoginService:45 - employee_test logged in successfully
+2020-08-18 12:48:24 INFO  LoginService:45 - employee_test logged in successfully
+2020-08-18 12:48:56 INFO  LoginService:45 - jane_doe logged in successfully
+2020-08-18 12:49:24 ERROR CustomerRegistrationLoginMenu:37 - Login attempt for user admin failed.
+2020-08-18 12:49:32 INFO  LoginService:45 - employee_test logged in successfully
+2020-08-18 12:49:37 INFO  LoginService:45 - admin logged in successfully
+2020-08-18 13:44:00 ERROR CustomerRegistrationLoginMenu:37 - Username  does not exist!
+2020-08-18 13:44:22 INFO  RegistrationService:62 -  registered successfully
+2020-08-18 22:42:26 ERROR CustomerRegistrationLoginMenu:53 -  username already exists!
+2020-08-18 22:48:32 ERROR CustomerRegistrationLoginMenu:53 - Fields cannot be blank. Please try to register again.
+2020-08-18 22:49:34 ERROR CustomerRegistrationLoginMenu:53 - Blank fields are not allowed. Customer entered blank registration fields.
+2020-08-18 23:07:12 ERROR CustomerRegistrationLoginMenu:54 - Blank fields are not allowed. Customer entered blank registration fields.
+2020-08-18 23:11:37 ERROR CustomerRegistrationLoginMenu:43 - Login attempt for user admin failed.
+2020-08-18 23:25:41 INFO  LoginService:51 - jane_doe logged in successfully
+2020-08-18 23:25:48 ERROR CustomerRegistrationLoginMenu:43 - Login attempt for user jane_doe failed.
+2020-08-18 23:26:04 ERROR CustomerRegistrationLoginMenu:38 - Login attempt for user admin failed.
+2020-08-18 23:26:12 INFO  LoginService:51 - employee_test logged in successfully
+2020-08-18 23:26:19 INFO  LoginService:51 - admin logged in successfully
+2020-08-18 23:27:14 INFO  LoginService:51 - employee_test logged in successfully
+2020-08-18 23:27:18 ERROR CustomerRegistrationLoginMenu:47 - Login attempt for user admin failed.
+2020-08-18 23:27:25 INFO  LoginService:51 - admin logged in successfully
+2020-08-18 23:27:54 INFO  LoginService:51 - admin logged in successfully
+2020-08-19 09:54:33 ERROR CustomerRegistrationLoginMenu:43 - Username john_doe does not exist!
+2020-08-19 09:54:50 INFO  LoginService:51 - jane_doe logged in successfully
+2020-08-19 09:56:51 INFO  LoginService:51 - jane_doe logged in successfully
+2020-08-19 09:58:30 INFO  LoginService:51 - jane_doe logged in successfully
+2020-08-19 10:12:45 ERROR CustomerRegistrationLoginMenu:43 - Login attempt for user jane_doe failed.
+2020-08-19 10:15:19 ERROR CustomerRegistrationLoginMenu:54 - An error occurred when attempting to perform database operations during registration for username bob_smith
+2020-08-19 10:22:05 INFO  RegistrationService:75 - bob_smith registered successfully
+2020-08-19 10:44:44 ERROR CustomerRegistrationLoginMenu:54 - Blank fields are not allowed. Customer entered blank registration fields.
+2020-08-19 10:45:59 ERROR CustomerRegistrationLoginMenu:38 - Login attempt for user employee_test failed.
+2020-08-19 10:46:10 INFO  LoginService:51 - employee_test logged in successfully
+2020-08-19 10:58:44 INFO  RegistrationService:91 - New user john_smith registered successfully
+2020-08-19 11:06:20 INFO  RegistrationService:91 - New user john_doe registered successfully
+2020-08-19 11:42:26 ERROR CustomerRegistrationLoginMenu:38 - Username  does not exist!
+2020-08-19 11:43:02 INFO  LoginService:51 - john_doe logged in successfully
+2020-08-19 11:43:51 INFO  LoginService:51 - john_doe logged in successfully
+2020-08-19 11:52:50 ERROR CustomerRegistrationLoginMenu:43 - Username dfdfd does not exist!
+2020-08-19 13:02:45 INFO  LoginService:53 - jane_doe logged in successfully
+2020-08-19 17:11:25 ERROR CustomerRegistrationLoginMenu:43 - jane_doe is not authorized for loginType Customer
+2020-08-19 17:12:01 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-19 17:12:10 ERROR CustomerRegistrationLoginMenu:38 - jane_doe is not authorized for loginType Employee
+2020-08-19 17:12:18 ERROR CustomerRegistrationLoginMenu:47 - jane_doe is not authorized for loginType Admin
+2020-08-19 18:54:29 INFO  LoginService:57 - employee_test logged in successfully
+2020-08-19 18:55:54 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-19 21:09:54 INFO  LoginService:57 - admin logged in successfully
+2020-08-19 21:10:03 INFO  LoginService:57 - admin logged in successfully
+2020-08-19 21:10:10 INFO  LoginService:57 - admin logged in successfully
+2020-08-19 21:10:26 INFO  LoginService:57 - employee_test logged in successfully
+2020-08-19 22:03:03 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-19 22:04:17 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-19 22:05:52 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-19 22:06:10 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-19 22:06:51 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-19 22:09:20 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-19 22:11:02 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-19 22:11:04 INFO  CustomerMainMenu:43 - An issue occurred while retrieving pending accounts for user id 1
+2020-08-19 22:11:53 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-19 22:11:55 INFO  CustomerMainMenu:42 - An issue occurred while retrieving pending accounts for user id 1
+2020-08-19 22:12:37 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-19 22:12:39 INFO  CustomerMainMenu:42 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-19 22:13:51 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-19 22:13:58 INFO  CustomerMainMenu:42 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-19 22:21:18 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-19 22:21:19 INFO  CustomerMainMenu:42 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-19 22:21:30 ERROR CustomerRegistrationLoginMenu:43 - Username  does not exist!
+2020-08-19 22:21:53 INFO  RegistrationService:93 - New user john_smith registered successfully
+2020-08-19 22:23:39 INFO  LoginService:57 - john_smith logged in successfully
+2020-08-19 22:26:32 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-19 22:26:34 INFO  CustomerMainMenu:42 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-19 22:26:43 INFO  LoginService:57 - john_smith logged in successfully
+2020-08-19 22:26:49 INFO  BankAccountApplyService:40 - User john_smith has applied for a bank account
+2020-08-19 22:27:33 INFO  LoginService:57 - john_smith logged in successfully
+2020-08-19 22:27:40 INFO  BankAccountApplyService:40 - User john_smith has applied for a bank account
+2020-08-19 23:09:16 ERROR CustomerRegistrationLoginMenu:43 - Username john_doe does not exist!
+2020-08-19 23:09:24 INFO  LoginService:57 - john_smith logged in successfully
+2020-08-19 23:09:27 INFO  BankAccountApplyService:41 - User john_smith has applied for a bank account
+2020-08-19 23:10:19 INFO  CustomerMainMenu:42 - User john_smith tried to apply, but already has a bank account application pending
+2020-08-20 00:02:19 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-20 00:03:50 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-20 00:05:34 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-20 00:05:37 ERROR CustomerMainMenu:44 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-20 00:06:33 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-20 00:06:42 ERROR CustomerMainMenu:44 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-20 00:06:52 INFO  LoginService:57 - john_smith logged in successfully
+2020-08-20 00:07:01 INFO  BankAccountApplyService:42 - User john_smith has applied for a bank account
+2020-08-20 09:02:38 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-20 09:02:40 ERROR CustomerMainMenu:43 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-20 09:09:11 ERROR CustomerMainMenu:43 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-20 09:10:20 INFO  RegistrationService:93 - New user john_doe registered successfully
+2020-08-20 09:11:48 INFO  LoginService:57 - john_doe logged in successfully
+2020-08-20 09:12:30 INFO  BankAccountApplyService:45 - User john_doe has applied for a bank account
+2020-08-20 09:13:05 INFO  LoginService:57 - employee_test logged in successfully
+2020-08-20 09:13:17 INFO  LoginService:57 - employee_test logged in successfully
+2020-08-20 09:13:34 ERROR CustomerMainMenu:43 - User employee_test tried to apply, but already has a bank account application pending
+2020-08-20 09:31:03 INFO  LoginService:57 - employee_test logged in successfully
+2020-08-20 10:29:43 ERROR CustomerRegistrationLoginMenu:43 - Username john_smith does not exist!
+2020-08-20 10:30:05 ERROR CustomerRegistrationLoginMenu:43 - Username  does not exist!
+2020-08-20 10:30:48 INFO  RegistrationService:93 - New user john_smith registered successfully
+2020-08-20 10:31:31 INFO  LoginService:57 - john_smith logged in successfully
+2020-08-20 10:34:41 INFO  LoginService:57 - john_smith logged in successfully
+2020-08-20 10:37:04 INFO  LoginService:57 - john_doe logged in successfully
+2020-08-20 10:39:04 INFO  LoginService:57 - john_doe logged in successfully
+2020-08-20 10:39:36 INFO  LoginService:57 - john_doe logged in successfully
+2020-08-20 10:42:18 INFO  LoginService:57 - john_doe logged in successfully
+2020-08-20 10:42:38 INFO  LoginService:57 - john_doe logged in successfully
+2020-08-20 10:43:52 ERROR CustomerMainMenu:46 - User john_doe tried to apply, but already has a bank account application pending
+2020-08-20 10:52:29 ERROR CustomerRegistrationLoginMenu:47 - Login attempt for user admin failed.
+2020-08-20 10:52:36 INFO  LoginService:57 - admin logged in successfully
+2020-08-20 10:59:45 INFO  LoginService:57 - employee_test logged in successfully
+2020-08-20 11:00:20 ERROR CustomerRegistrationLoginMenu:54 - john_smith username already exists!
+2020-08-20 11:00:27 INFO  LoginService:57 - john_smith logged in successfully
+2020-08-20 11:00:49 INFO  BankAccountApplyService:45 - User john_smith has applied for a bank account
+2020-08-20 11:08:54 INFO  LoginService:57 - john_doe logged in successfully
+2020-08-20 11:22:32 INFO  LoginService:57 - admin logged in successfully
+2020-08-20 11:23:32 INFO  RegistrationService:96 - New user aqrulesms of type Employee registered successfully
+2020-08-20 11:26:49 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-20 11:27:09 ERROR CustomerMainMenu:46 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-20 11:27:37 INFO  LoginService:57 - admin logged in successfully
+2020-08-20 11:28:41 ERROR CustomerRegistrationLoginMenu:38 - jane_doe is not authorized for loginType Employee
+2020-08-20 11:28:51 ERROR CustomerRegistrationLoginMenu:38 - jane_doe is not authorized for loginType Employee
+2020-08-20 11:29:31 ERROR CustomerRegistrationLoginMenu:38 - jane_doe is not authorized for loginType Employee
+2020-08-20 11:29:38 ERROR CustomerRegistrationLoginMenu:47 - jane_doe is not authorized for loginType Admin
+2020-08-20 11:29:45 INFO  LoginService:57 - admin logged in successfully
+2020-08-20 11:30:02 ERROR CustomerMainMenu:46 - User admin tried to apply, but already has a bank account application pending
+2020-08-20 11:32:01 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-20 11:32:08 ERROR CustomerMainMenu:46 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-20 11:32:47 INFO  LoginService:57 - admin logged in successfully
+2020-08-20 11:33:33 INFO  RegistrationService:96 - New user billy_bob of type Employee registered successfully
+2020-08-20 11:34:15 ERROR CustomerRegistrationLoginMenu:47 - billy_bob is not authorized for loginType Admin
+2020-08-20 11:34:24 INFO  LoginService:57 - billy_bob logged in successfully
+2020-08-20 11:35:21 INFO  LoginService:57 - billy_bob logged in successfully
+2020-08-20 13:05:54 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-20 13:06:54 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-20 13:06:58 ERROR CustomerMainMenu:46 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-20 13:07:27 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-20 13:07:44 ERROR CustomerRegistrationLoginMenu:43 - Login attempt for user billy_bob failed.
+2020-08-20 13:07:55 INFO  LoginService:57 - billy_bob logged in successfully
+2020-08-20 13:08:04 INFO  BankAccountApplyService:48 - User billy_bob has applied for a bank account
+2020-08-20 13:08:14 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-20 15:16:11 INFO  LoginService:57 - admin logged in successfully
+2020-08-20 15:16:24 INFO  LoginService:57 - billy_bob logged in successfully
+2020-08-20 15:28:42 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-20 15:30:12 ERROR CustomerMainMenu:46 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-20 16:00:07 INFO  LoginService:57 - billy_bob logged in successfully
+2020-08-20 16:19:16 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-20 16:19:18 ERROR CustomerMainMenu:59 - Unable to retrieve pending or denied applications from the DB
+2020-08-20 16:22:20 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-20 16:22:22 ERROR CustomerMainMenu:59 - Unable to retrieve application history from the DB
+2020-08-20 16:23:00 INFO  LoginService:57 - jane_doe logged in successfully
+2020-08-20 16:23:24 INFO  LoginService:57 - employee_test logged in successfully
+2020-08-20 16:23:29 ERROR CustomerMainMenu:46 - User employee_test tried to apply, but already has a bank account application pending
+2020-08-20 16:23:59 INFO  LoginService:57 - billy_bob logged in successfully
+2020-08-20 16:57:13 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 16:59:07 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 21:34:22 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 21:39:42 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 21:43:53 INFO  LoginService:60 - admin logged in successfully
+2020-08-20 21:44:25 INFO  LoginService:60 - employee_test logged in successfully
+2020-08-20 21:46:26 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 21:46:42 INFO  LoginService:60 - admin logged in successfully
+2020-08-20 21:46:55 INFO  LoginService:60 - employee_test logged in successfully
+2020-08-20 21:47:59 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 21:52:59 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 21:53:23 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 21:55:55 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 21:56:58 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 21:57:15 INFO  LoginService:60 - admin logged in successfully
+2020-08-20 21:57:39 INFO  LoginService:60 - employee_test logged in successfully
+2020-08-20 21:58:02 INFO  LoginService:60 - billy_bob logged in successfully
+2020-08-20 21:58:22 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 21:59:00 ERROR CustomerMainMenu:50 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-20 21:59:10 ERROR CustomerRegistrationLoginMenu:43 - Login attempt for user employee_test failed.
+2020-08-20 21:59:18 INFO  LoginService:60 - employee_test logged in successfully
+2020-08-20 21:59:40 INFO  LoginService:60 - admin logged in successfully
+2020-08-20 22:00:24 INFO  LoginService:60 - billy_bob logged in successfully
+2020-08-20 22:00:47 ERROR CustomerMainMenu:50 - User billy_bob tried to apply, but already has a bank account application pending
+2020-08-20 22:08:09 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 22:08:37 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 22:12:13 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 22:20:06 INFO  LoginService:60 - billy_bob logged in successfully
+2020-08-20 22:20:17 INFO  LoginService:60 - admin logged in successfully
+2020-08-20 22:20:38 INFO  LoginService:60 - employee_test logged in successfully
+2020-08-20 22:21:12 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 22:23:59 INFO  LoginService:60 - billy_bob logged in successfully
+2020-08-20 22:24:13 INFO  LoginService:60 - admin logged in successfully
+2020-08-20 22:24:27 INFO  LoginService:60 - admin logged in successfully
+2020-08-20 22:24:40 INFO  LoginService:60 - admin logged in successfully
+2020-08-20 22:24:54 INFO  LoginService:60 - admin logged in successfully
+2020-08-20 22:58:34 INFO  LoginService:60 - employee_test logged in successfully
+2020-08-20 22:59:30 INFO  LoginService:60 - employee_test logged in successfully
+2020-08-20 23:00:38 INFO  LoginService:60 - employee_test logged in successfully
+2020-08-20 23:02:26 INFO  LoginService:60 - employee_test logged in successfully
+2020-08-20 23:03:43 INFO  LoginService:60 - billy_bob logged in successfully
+2020-08-20 23:15:18 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 23:37:52 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 23:38:17 INFO  LoginService:60 - admin logged in successfully
+2020-08-20 23:38:36 INFO  LoginService:60 - billy_bob logged in successfully
+2020-08-20 23:38:45 ERROR CustomerRegistrationLoginMenu:47 - billy_bob is not authorized for loginType Admin
+2020-08-20 23:54:41 INFO  LoginService:60 - jane_doe logged in successfully
+2020-08-20 23:54:55 INFO  LoginService:60 - admin logged in successfully
+2020-08-20 23:55:34 INFO  LoginService:60 - employee_test logged in successfully
+2020-08-20 23:55:57 INFO  LoginService:60 - billy_bob logged in successfully
+2020-08-21 09:20:50 INFO  LoginService:64 - jane_doe logged in successfully
+2020-08-21 09:30:34 ERROR CustomerRegistrationLoginMenu:44 - Username  does not exist!
+2020-08-21 09:35:22 INFO  RegistrationService:96 - New user bach_tran of type Customer registered successfully
+2020-08-21 09:46:58 INFO  LoginService:64 - bach_tran logged in successfully
+2020-08-21 09:47:09 INFO  BankAccountApplicationsService:46 - User bach_tran has applied for a bank account
+2020-08-21 13:53:16 INFO  LoginService:64 - employee_test logged in successfully
+2020-08-21 13:54:34 INFO  LoginService:64 - employee_test logged in successfully
+2020-08-21 14:01:18 INFO  LoginService:64 - jane_doe logged in successfully
+2020-08-21 14:02:41 INFO  LoginService:64 - employee_test logged in successfully
+2020-08-21 14:17:18 ERROR CustomerRegistrationLoginMenu:55 - Blank fields are not allowed. Customer entered blank registration fields.
+2020-08-21 14:17:25 INFO  LoginService:63 - bach_tran logged in successfully
+2020-08-21 14:17:52 INFO  RegistrationService:96 - New user john_doe of type Customer registered successfully
+2020-08-21 14:18:03 INFO  BankAccountApplicationsService:48 - User john_doe has applied for a bank account
+2020-08-21 14:19:05 INFO  LoginService:63 - john_doe logged in successfully
+2020-08-21 14:20:13 INFO  RegistrationService:96 - New user billy_joe of type Customer registered successfully
+2020-08-21 14:22:07 INFO  RegistrationService:96 - New user test12345 of type Customer registered successfully
+2020-08-21 14:24:24 INFO  RegistrationService:97 - New user testing123 of type Customer registered successfully
+2020-08-21 14:31:13 INFO  LoginService:63 - employee_test logged in successfully
+2020-08-21 14:48:13 INFO  LoginService:63 - jane_doe logged in successfully
+2020-08-21 14:48:37 INFO  LoginService:63 - employee_test logged in successfully
+2020-08-21 14:49:50 INFO  LoginService:63 - admin logged in successfully
+2020-08-21 14:50:13 INFO  LoginService:63 - jane_doe logged in successfully
+2020-08-21 14:52:50 INFO  LoginService:63 - billy_bob logged in successfully
+2020-08-21 15:05:31 INFO  LoginService:63 - employee_test logged in successfully
+2020-08-21 15:06:02 INFO  LoginService:63 - employee_test logged in successfully
+2020-08-21 16:44:11 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-21 21:20:17 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-21 21:23:16 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-21 21:25:05 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-21 21:26:56 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-21 21:30:13 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-21 21:38:03 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-21 21:39:27 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-21 21:45:50 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-21 21:57:19 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-21 21:57:43 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-21 21:57:51 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-21 21:58:12 ERROR CustomerMainMenu:37 - Unable to query pending applications from the database
+2020-08-21 22:01:10 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-21 22:01:18 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-21 22:01:27 INFO  BankAccountApplicationsService:106 - Employee employee_test successfully approved account ID 5 for user billy_bob
+2020-08-21 22:02:07 INFO  LoginService:62 - billy_bob logged in successfully
+2020-08-21 22:02:24 INFO  LoginService:62 - billy_bob logged in successfully
+2020-08-21 22:02:37 INFO  BankAccountApplicationsService:106 - Employee billy_bob successfully approved account ID 4 for user jane_doe
+2020-08-21 22:02:52 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-21 22:03:27 INFO  LoginService:62 - admin logged in successfully
+2020-08-21 22:03:56 ERROR CustomerRegistrationLoginMenu:47 - Username  does not exist!
+2020-08-21 22:04:09 INFO  LoginService:62 - admin logged in successfully
+2020-08-21 22:04:24 INFO  BankAccountApplicationsService:106 - Admin admin successfully approved account ID 6 for user admin
+2020-08-21 22:04:39 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-21 22:05:29 INFO  BankAccountApplicationsService:48 - User jane_doe has applied for a bank account
+2020-08-21 22:05:49 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-21 22:06:02 INFO  BankAccountApplicationsService:106 - Employee employee_test successfully approved account ID 2 for user admin
+2020-08-21 22:06:08 INFO  BankAccountApplicationsService:106 - Employee employee_test successfully approved account ID 3 for user employee_test
+2020-08-21 22:06:12 INFO  BankAccountApplicationsService:106 - Employee employee_test successfully approved account ID 7 for user bach_tran
+2020-08-21 22:06:15 INFO  BankAccountApplicationsService:106 - Employee employee_test successfully approved account ID 8 for user john_doe
+2020-08-21 22:06:18 INFO  BankAccountApplicationsService:106 - Employee employee_test successfully approved account ID 9 for user jane_doe
+2020-08-21 22:12:16 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-22 10:48:17 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-22 10:49:15 INFO  BankAccountApplicationsService:106 - Employee employee_test successfully approved account ID 8 for user john_doe
+2020-08-22 11:41:02 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-22 11:43:10 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-22 11:44:18 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-22 11:57:33 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-22 11:57:39 INFO  BankAccountApplicationsService:111 - Employee employee_test successfully approved account ID 9 for user jane_doe
+2020-08-22 11:58:15 INFO  BankAccountApplicationsService:120 - Employee employee_test successfully denied account ID 6 for user admin
+2020-08-22 11:58:28 INFO  LoginService:62 - admin logged in successfully
+2020-08-22 11:58:38 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-22 11:58:52 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-22 11:59:04 INFO  BankAccountApplicationsService:111 - Employee employee_test successfully approved account ID 6 for user jane_doe
+2020-08-22 11:59:12 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-22 12:01:04 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-22 12:08:05 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-22 12:08:12 INFO  BankAccountApplicationsService:120 - Employee employee_test successfully denied account ID 6 for user jane_doe
+2020-08-22 12:08:16 INFO  BankAccountApplicationsService:120 - Employee employee_test successfully denied account ID 4 for user jane_doe
+2020-08-22 12:08:17 INFO  BankAccountApplicationsService:120 - Employee employee_test successfully denied account ID 1 for user jane_doe
+2020-08-22 12:08:18 INFO  BankAccountApplicationsService:120 - Employee employee_test successfully denied account ID 6 for user admin
+2020-08-22 12:08:19 INFO  BankAccountApplicationsService:120 - Employee employee_test successfully denied account ID 2 for user admin
+2020-08-22 12:08:21 INFO  BankAccountApplicationsService:120 - Employee employee_test successfully denied account ID 3 for user employee_test
+2020-08-22 12:08:23 INFO  BankAccountApplicationsService:120 - Employee employee_test successfully denied account ID 5 for user billy_bob
+2020-08-22 12:08:25 INFO  BankAccountApplicationsService:111 - Employee employee_test successfully approved account ID 7 for user bach_tran
+2020-08-22 12:08:58 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 12:09:19 INFO  LoginService:62 - john_doe logged in successfully
+2020-08-22 12:09:30 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-22 12:16:44 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-22 12:18:11 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-22 12:19:53 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-22 12:19:55 ERROR CustomerMainMenu:47 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-22 12:30:11 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-22 12:30:45 INFO  BankAccountApplicationsService:118 - Employee employee_test successfully approved account ID 6 for user jane_doe
+2020-08-22 12:39:10 INFO  LoginService:62 - admin logged in successfully
+2020-08-22 12:39:28 INFO  BankAccountApplicationsService:118 - Admin admin successfully approved account ID 6 for user admin
+2020-08-22 12:39:47 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-22 12:40:16 INFO  LoginService:62 - admin logged in successfully
+2020-08-22 17:01:46 INFO  LoginService:62 - admin logged in successfully
+2020-08-22 17:02:01 INFO  BankAccountApplicationsService:118 - Admin admin successfully approved account ID 8 for user john_doe
+2020-08-22 17:02:13 INFO  BankAccountApplicationsService:127 - Admin admin successfully denied account ID 7 for user bach_tran
+2020-08-22 17:02:49 ERROR AdminMainMenu:39 - Blank fields are not allowed. Customer entered blank registration fields.
+2020-08-22 17:03:47 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-22 17:04:38 INFO  LoginService:62 - employee_test logged in successfully
+2020-08-22 17:09:06 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 17:38:03 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-22 17:38:43 INFO  BankAccountApplicationsService:197 - jane_doe successfully applied for a joint account with existing accountID 8
+2020-08-22 17:39:36 INFO  LoginService:62 - john_doe logged in successfully
+2020-08-22 17:39:51 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-22 17:40:09 INFO  BankAccountApplicationsService:197 - jane_doe successfully applied for a joint account with existing accountID 8
+2020-08-22 17:40:42 INFO  BankAccountApplicationsService:197 - jane_doe successfully applied for a joint account with existing accountID 8
+2020-08-22 17:41:03 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-22 17:41:24 INFO  BankAccountApplicationsService:197 - jane_doe successfully applied for a joint account with existing accountID 8
+2020-08-22 17:41:35 ERROR CustomerMainMenu:56 - A previous pending or denied joint application already exists, or the accountID supplied does not exist
+2020-08-22 17:44:23 ERROR CustomerMainMenu:47 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-22 17:45:19 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-22 17:45:20 ERROR CustomerMainMenu:56 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-22 17:48:09 INFO  LoginService:62 - admin logged in successfully
+2020-08-22 17:49:00 INFO  RegistrationService:96 - New user employee1 of type Employee registered successfully
+2020-08-22 17:49:43 INFO  LoginService:62 - employee1 logged in successfully
+2020-08-22 17:50:32 INFO  RegistrationService:96 - New user bach_tran of type Customer registered successfully
+2020-08-22 17:50:42 ERROR CustomerMainMenu:56 - A previous pending or denied joint application already exists, or the accountID supplied does not exist
+2020-08-22 17:51:24 INFO  BankAccountApplicationsService:48 - User bach_tran has applied for a bank account
+2020-08-22 17:52:23 INFO  RegistrationService:96 - New user jane_tran of type Customer registered successfully
+2020-08-22 17:52:42 INFO  BankAccountApplicationsService:202 - jane_tran successfully applied for a joint account with existing accountID 10
+2020-08-22 17:53:16 INFO  LoginService:62 - employee1 logged in successfully
+2020-08-22 17:53:46 INFO  BankAccountApplicationsService:118 - Employee employee1 successfully approved account ID 10 for user bach_tran
+2020-08-22 17:54:00 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 17:54:31 INFO  LoginService:62 - employee1 logged in successfully
+2020-08-22 17:54:47 INFO  BankAccountApplicationsService:127 - Employee employee1 successfully denied account ID 10 for user jane_tran
+2020-08-22 17:54:58 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 17:55:28 INFO  LoginService:62 - employee1 logged in successfully
+2020-08-22 17:56:01 ERROR CustomerRegistrationLoginMenu:42 - Username john_tran does not exist!
+2020-08-22 17:56:20 INFO  RegistrationService:96 - New user john_tran of type Customer registered successfully
+2020-08-22 17:56:22 INFO  BankAccountApplicationsService:202 - john_tran successfully applied for a joint account with existing accountID 10
+2020-08-22 17:56:36 INFO  LoginService:62 - employee1 logged in successfully
+2020-08-22 17:56:46 INFO  BankAccountApplicationsService:118 - Employee employee1 successfully approved account ID 10 for user jane_tran
+2020-08-22 17:56:51 INFO  BankAccountApplicationsService:118 - Employee employee1 successfully approved account ID 10 for user john_tran
+2020-08-22 17:57:05 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 17:57:30 INFO  BankAccountApplicationsService:48 - User bach_tran has applied for a bank account
+2020-08-22 17:57:45 INFO  LoginService:62 - employee1 logged in successfully
+2020-08-22 17:57:47 INFO  BankAccountApplicationsService:118 - Employee employee1 successfully approved account ID 11 for user bach_tran
+2020-08-22 17:57:54 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 17:58:05 ERROR CustomerMainMenu:56 - A previous pending or denied joint application already exists, or the accountID supplied does not exist
+2020-08-22 17:58:27 INFO  LoginService:62 - admin logged in successfully
+2020-08-22 18:01:11 INFO  LoginService:62 - admin logged in successfully
+2020-08-22 18:01:55 INFO  LoginService:62 - admin logged in successfully
+2020-08-22 21:23:01 ERROR CustomerRegistrationLoginMenu:42 - Username jane_doe does not exist!
+2020-08-22 21:23:18 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 21:40:49 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 21:43:51 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 21:56:55 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 22:01:35 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 22:04:05 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 22:04:27 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 22:04:41 ERROR CustomerMainMenu:44 - Incorrect operation type specified. Type needs to be 'deposit', 'withdraw', or 'transfer'
+2020-08-22 22:12:20 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 22:12:28 ERROR CustomerMainMenu:44 - bach_tran failed to deposit 1000 to accountID 10
+2020-08-22 22:15:03 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 22:16:30 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 22:16:42 INFO  MoneyManagementService:75 - bach_tran successfully deposited 1000 to accountID 10
+2020-08-22 22:23:02 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 22:23:47 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 22:24:12 ERROR CustomerRegistrationLoginMenu:42 - Username employee_test does not exist!
+2020-08-22 22:24:18 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 22:24:37 INFO  LoginService:62 - jane_tran logged in successfully
+2020-08-22 22:27:58 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 22:28:13 ERROR CustomerMainMenu:44 - bach_tran failed to deposit 0.0 to accountID 11
+2020-08-22 22:28:24 ERROR CustomerMainMenu:44 - bach_tran failed to deposit -10.0 to accountID 11
+2020-08-22 22:29:14 INFO  MoneyManagementService:85 - bach_tran successfully deposited 100.0 to accountID 11
+2020-08-22 22:32:40 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 22:32:53 INFO  MoneyManagementService:85 - bach_tran successfully deposited 500.0 to accountID 11
+2020-08-22 22:34:31 ERROR CustomerRegistrationLoginMenu:42 - Username jane_doe does not exist!
+2020-08-22 22:34:38 ERROR CustomerRegistrationLoginMenu:42 - Username jane_tra does not exist!
+2020-08-22 22:34:43 INFO  LoginService:62 - jane_tran logged in successfully
+2020-08-22 22:35:01 INFO  MoneyManagementService:100 - jane_tran successfully withdrew 500.0 to accountID 10
+2020-08-22 22:35:52 INFO  MoneyManagementService:100 - jane_tran successfully withdrew 100.0 to accountID 10
+2020-08-22 22:36:06 INFO  MoneyManagementService:89 - jane_tran successfully deposited 600.0 to accountID 10
+2020-08-22 22:41:00 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 22:41:56 INFO  MoneyManagementService:113 - bach_tran successfully transferred 200.0 from accountID 10 to accountID 11
+2020-08-22 22:42:19 ERROR CustomerRegistrationLoginMenu:42 - Username jane_doe does not exist!
+2020-08-22 22:42:24 INFO  LoginService:62 - jane_tran logged in successfully
+2020-08-22 22:57:25 INFO  LoginService:62 - admin logged in successfully
+2020-08-22 23:01:10 INFO  LoginService:62 - admin logged in successfully
+2020-08-22 23:01:19 INFO  BankAccountApplicationsService:48 - User admin has applied for a bank account
+2020-08-22 23:01:28 INFO  LoginService:62 - admin logged in successfully
+2020-08-22 23:01:31 INFO  BankAccountApplicationsService:118 - Admin admin successfully approved account ID 12 for user admin
+2020-08-22 23:01:38 INFO  LoginService:62 - admin logged in successfully
+2020-08-22 23:01:52 INFO  MoneyManagementService:91 - admin successfully deposited 1000.0 to accountID 12
+2020-08-22 23:02:08 INFO  LoginService:62 - admin logged in successfully
+2020-08-22 23:02:24 INFO  LoginService:62 - admin logged in successfully
+2020-08-22 23:03:13 ERROR AdminMainMenu:43 - admin failed to transfer 900.0 from accountID 10 to accountID 12
+2020-08-22 23:03:40 INFO  MoneyManagementService:115 - admin successfully transferred 800.0 from accountID 10 to accountID 12
+2020-08-22 23:04:01 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-22 23:04:37 INFO  MoneyManagementService:115 - bach_tran successfully transferred 400.0 from accountID 11 to accountID 2
+2020-08-22 23:10:26 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-23 11:42:57 INFO  RegistrationService:96 - New user bach_tran of type Customer registered successfully
+2020-08-23 11:44:09 INFO  BankAccountApplicationsService:48 - User bach_tran has applied for a bank account
+2020-08-23 11:44:19 INFO  LoginService:62 - admin logged in successfully
+2020-08-23 11:44:56 INFO  RegistrationService:96 - New user employee of type Employee registered successfully
+2020-08-23 11:45:18 INFO  LoginService:62 - employee logged in successfully
+2020-08-23 11:45:30 INFO  BankAccountApplicationsService:118 - Employee employee successfully approved account ID 1 for user bach_tran
+2020-08-23 11:45:37 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-23 11:45:48 ERROR CustomerMainMenu:44 - bach_tran failed to deposit 0.0 to accountID 1
+2020-08-23 11:46:04 ERROR CustomerMainMenu:44 - A database interaction issue occurred while trying to deposit, withdraw, or transfer
+2020-08-23 11:48:14 INFO  MoneyManagementService:91 - bach_tran successfully deposited 10000.0 to accountID 1
+2020-08-23 11:48:55 INFO  RegistrationService:96 - New user jane_tran of type Customer registered successfully
+2020-08-23 11:49:09 INFO  BankAccountApplicationsService:202 - jane_tran successfully applied for a joint account with existing accountID 1
+2020-08-23 11:49:24 INFO  LoginService:62 - employee logged in successfully
+2020-08-23 11:49:33 INFO  BankAccountApplicationsService:118 - Employee employee successfully approved account ID 1 for user jane_tran
+2020-08-23 11:50:00 INFO  LoginService:62 - jane_tran logged in successfully
+2020-08-23 11:50:15 INFO  MoneyManagementService:102 - jane_tran successfully withdrew 1000.0 from accountID 1
+2020-08-23 11:50:25 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-23 11:50:34 INFO  BankAccountApplicationsService:48 - User bach_tran has applied for a bank account
+2020-08-23 11:50:48 INFO  LoginService:62 - admin logged in successfully
+2020-08-23 11:50:56 INFO  BankAccountApplicationsService:118 - Admin admin successfully approved account ID 2 for user bach_tran
+2020-08-23 11:51:04 ERROR MainMenu:38 - bach_tran is not authorized for loginType Employee
+2020-08-23 11:51:11 ERROR MainMenu:47 - bach_tran is not authorized for loginType Admin
+2020-08-23 11:51:23 INFO  LoginService:62 - admin logged in successfully
+2020-08-23 11:51:34 INFO  LoginService:62 - admin logged in successfully
+2020-08-23 11:52:16 INFO  MoneyManagementService:115 - admin successfully transferred 4500.0 from accountID 1 to accountID 2
+2020-08-23 11:52:31 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-23 13:01:02 INFO  MoneyManagementService:115 - bach_tran successfully transferred 1000.0 from accountID 1 to accountID 3
+2020-08-23 13:01:57 INFO  MoneyManagementService:91 - bach_tran successfully deposited 1000.0 to accountID 1
+2020-08-23 13:02:06 ERROR CustomerMainMenu:44 - bach_tran failed to transfer 1000.0 from accountID 1 to accountID 3
+2020-08-23 13:02:34 ERROR CustomerMainMenu:44 - bach_tran failed to withdraw 4501.0 from accountID 1
+2020-08-23 13:02:48 ERROR CustomerMainMenu:44 - bach_tran failed to transfer 4501.0 from accountID 1 to accountID 3
+2020-08-23 13:02:58 ERROR CustomerMainMenu:44 - bach_tran failed to transfer 4501.0 from accountID 1 to accountID 2
+2020-08-23 13:13:30 ERROR CustomerMainMenu:44 - bach_tran failed to transfer 4500.0 from accountID 1 to accountID 3
+2020-08-23 13:14:36 INFO  LoginService:62 - admin logged in successfully
+2020-08-23 13:14:45 INFO  MoneyManagementService:91 - admin successfully deposited 500.0 to accountID 2
+2020-08-23 13:15:52 ERROR CustomerRegistrationLoginMenu:42 - Username bach-tran does not exist!
+2020-08-23 13:15:57 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-23 13:16:14 INFO  MoneyManagementService:102 - Customer bach_tran successfully withdrew 500.0 from accountID 2
+2020-08-23 13:16:29 ERROR CustomerMainMenu:44 - bach_tran failed to transfer 4501.0 from accountID 2 to accountID 1
+2020-08-23 13:16:42 INFO  MoneyManagementService:115 - Customer bach_tran successfully transferred 500.0 from accountID 2 to accountID 1
+2020-08-23 14:34:40 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-23 14:35:23 INFO  MoneyManagementService:115 - Customer bach_tran successfully transferred 500.0 from accountID 1 to accountID 2
+2020-08-23 14:35:57 INFO  LoginService:62 - jane_tran logged in successfully
+2020-08-23 14:37:19 ERROR CustomerRegistrationLoginMenu:42 - Username john_tran does not exist!
+2020-08-23 14:37:30 ERROR MainMenu:47 - Username b does not exist!
+2020-08-23 14:37:33 INFO  LoginService:62 - admin logged in successfully
+2020-08-23 14:37:56 ERROR CustomerRegistrationLoginMenu:42 - Username john_tran does not exist!
+2020-08-23 14:38:39 INFO  RegistrationService:96 - New user john_tran of type Customer registered successfully
+2020-08-23 14:38:52 INFO  BankAccountApplicationsService:48 - User john_tran has applied for a bank account
+2020-08-23 14:39:05 INFO  LoginService:62 - employee logged in successfully
+2020-08-23 14:39:11 INFO  BankAccountApplicationsService:118 - Employee employee successfully approved account ID 3 for user john_tran
+2020-08-23 14:39:29 INFO  LoginService:62 - john_tran logged in successfully
+2020-08-23 14:39:41 INFO  BankAccountApplicationsService:202 - john_tran successfully applied for a joint account with existing accountID 1
+2020-08-23 14:39:57 ERROR MainMenu:38 - Username  does not exist!
+2020-08-23 14:40:04 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-23 14:40:34 ERROR CustomerMainMenu:44 - Incorrect operation type specified. Type needs to be 'view', 'deposit', 'withdraw', or 'transfer'
+2020-08-23 14:40:40 INFO  LoginService:62 - employee logged in successfully
+2020-08-23 14:40:50 INFO  BankAccountApplicationsService:118 - Employee employee successfully approved account ID 1 for user john_tran
+2020-08-23 14:40:57 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-23 14:41:09 ERROR CustomerMainMenu:44 - bach_tran failed to withdraw 4501.0 from accountID 1
+2020-08-23 14:41:19 INFO  MoneyManagementService:102 - Customer bach_tran successfully withdrew 1000.0 from accountID 1
+2020-08-23 14:41:28 INFO  LoginService:62 - john_tran logged in successfully
+2020-08-23 19:33:23 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-23 19:38:40 ERROR CustomerRegistrationLoginMenu:42 - Login attempt for user employee failed.
+2020-08-23 19:38:48 INFO  LoginService:62 - employee logged in successfully
+2020-08-23 19:38:51 ERROR CustomerMainMenu:44 - Incorrect operation type specified. Type needs to be 'view', 'deposit', 'withdraw', or 'transfer'
+2020-08-23 19:38:59 INFO  BankAccountApplicationsService:48 - User employee has applied for a bank account
+2020-08-23 19:39:04 INFO  LoginService:62 - employee logged in successfully
+2020-08-23 19:39:09 INFO  BankAccountApplicationsService:118 - Employee employee successfully approved account ID 4 for user employee
+2020-08-23 19:39:17 INFO  LoginService:62 - employee logged in successfully
