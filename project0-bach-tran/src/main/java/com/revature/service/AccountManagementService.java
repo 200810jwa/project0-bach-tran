@@ -10,7 +10,7 @@ import org.apache.log4j.Logger;
 
 import com.revature.dao.BankAccountDAO;
 import com.revature.dao.ConnectionUtility;
-import com.revature.exceptions.MoneyManagementException;
+import com.revature.exceptions.AccountManagementException;
 import com.revature.main.StateSingleton;
 import com.revature.model.BankAccount;
 
@@ -31,7 +31,7 @@ public class AccountManagementService implements Service {
 
 	// UI Method
 	@Override
-	public void execute() throws MoneyManagementException {
+	public void execute() throws AccountManagementException {
 		List<BankAccount> listApprovedAccountsUser = getApprovedAccountsUser(state.getCurrentUser().getId(), loginType);
 		state.setApprovedAccountsUser(listApprovedAccountsUser);
 		
@@ -83,25 +83,31 @@ public class AccountManagementService implements Service {
 			} else if (executeType.endsWith("view")) {
 				operationType = "view";
 			} else {
-				throw new MoneyManagementException("Incorrect operation type specified. Type needs to be 'view', 'deposit', 'withdraw', or 'transfer'");
+				throw new AccountManagementException("Incorrect operation type specified. Type needs to be 'view', 'deposit', 'withdraw', or 'transfer'");
 			}
 			
 			List<BankAccount> approvedAccounts = state.getApprovedAccountsUser();
 			int accountCounter = 0;
+			List<Integer> jointAccountIDs;
+			try {
+				jointAccountIDs = getJointIDs();
+			} catch (SQLException e1) {
+				throw new AccountManagementException("Unable to retrieve joint account IDs from DB");
+			}
 			System.out.println("====APPROVED ACCOUNTS====");
 			for (BankAccount b : approvedAccounts) {
 				accountCounter++;
 				System.out.print(accountCounter + ".) ");
 				System.out.println("Account ID: " + b.getId());
 				System.out.println("Balance: " + b.getBalance());
-				try {
-					if(isJoint(b.getId())) {
-						System.out.println("JOINT ACCOUNT");
-					}
-				} catch (SQLException e) {
-					throw new MoneyManagementException("An error occurred while trying to retrieve whether the accounts are joint from the DB");
+				if(jointAccountIDs.contains(b.getId())) {
+					System.out.println("JOINT ACCOUNT");
 				}
 				System.out.println();
+			}
+			
+			if (approvedAccounts.size() == 0) {
+				System.out.println("No Accounts Available");
 			}
 			
 			if (operationType.equals("view")) {
@@ -135,7 +141,7 @@ public class AccountManagementService implements Service {
 								log.info(state.getCurrentUser().getAccountType() + " " + state.getCurrentUser().getUsername() + " successfully deposited " +
 										depositAmount + " to accountID " + accountID);
 							} else {
-								throw new MoneyManagementException(state.getCurrentUser().getUsername() + 
+								throw new AccountManagementException(state.getCurrentUser().getUsername() + 
 										" failed to deposit " + depositAmount + " to accountID " + accountID);
 							}
 						} else if (operationType.equals("withdraw")) {
@@ -145,7 +151,7 @@ public class AccountManagementService implements Service {
 								log.info(state.getCurrentUser().getAccountType() + " " + state.getCurrentUser().getUsername() + " successfully withdrew " +
 										withdrawAmount + " from accountID " + accountID);
 							} else {
-								throw new MoneyManagementException(state.getCurrentUser().getUsername() +
+								throw new AccountManagementException(state.getCurrentUser().getUsername() +
 										" failed to withdraw " + withdrawAmount + " from accountID " + accountID);
 							}
 						} else if (operationType.equals("transfer")) {
@@ -157,7 +163,7 @@ public class AccountManagementService implements Service {
 								log.info(state.getCurrentUser().getAccountType() + " " + state.getCurrentUser().getUsername() + " successfully transferred " +
 										transferAmount + " from accountID " + accountID + " to accountID " + targetAccountID);
 							} else {
-								throw new MoneyManagementException(state.getCurrentUser().getUsername() + " failed to transfer " 
+								throw new AccountManagementException(state.getCurrentUser().getUsername() + " failed to transfer " 
 										+ transferAmount + " from accountID " + accountID + " to accountID " + targetAccountID);
 							}
 						}
@@ -165,26 +171,24 @@ public class AccountManagementService implements Service {
 				} catch (InputMismatchException e) {
 					System.out.println("Incorrect accountID or input, please try again");
 				} catch (SQLException e) {
-					throw new MoneyManagementException("A database interaction issue occurred while trying to deposit, withdraw, or transfer", e);
+					throw new AccountManagementException("A database interaction issue occurred while trying to deposit, withdraw, or transfer", e);
 				}
 			}
 			
 		}
 	}
 	
-	public boolean isJoint(int id) throws SQLException {
+	public List<Integer> getJointIDs() throws SQLException {
 		Connection con = ConnectionUtility.getConnection();
 		dao.setConnection(con);
 		
-		if (dao.getAccountIdListAllApprovedJoint().contains(id)) {
-			return true;
-		}
+		List<Integer> list = dao.getAccountIdListAllApprovedJoint();
 		
-		return false;
+		return list;
 	}
 
 	// Service Methods
-	public boolean cancelAccount(int accountId) throws MoneyManagementException {
+	public boolean cancelAccount(int accountId) throws AccountManagementException {
 		int result = 0;
 		Connection con = ConnectionUtility.getConnection();
 		dao.setConnection(con);
@@ -192,7 +196,7 @@ public class AccountManagementService implements Service {
 		try {
 			result = dao.deleteAccount(accountId);
 		} catch (SQLException e) {
-			throw new MoneyManagementException("Unable to delete accountID " + accountId, e);
+			throw new AccountManagementException("Unable to delete accountID " + accountId, e);
 		}
 		
 		if (result == 1) {
@@ -202,7 +206,7 @@ public class AccountManagementService implements Service {
 		}
 	}
 
-	public List<BankAccount> getCancelableAccounts() throws MoneyManagementException {
+	public List<BankAccount> getCancelableAccounts() throws AccountManagementException {
 		List<BankAccount> list;
 		Connection con = ConnectionUtility.getConnection();
 		dao.setConnection(con);
@@ -210,7 +214,7 @@ public class AccountManagementService implements Service {
 		try {
 			list = dao.getEmptyApprovedAccounts();
 		} catch (SQLException e) {
-			throw new MoneyManagementException("Unable to retrieve cancelable accounts", e);
+			throw new AccountManagementException("Unable to retrieve cancelable accounts", e);
 		} finally {
 			try {
 				con.close();
@@ -224,7 +228,7 @@ public class AccountManagementService implements Service {
 	}
 
 	public boolean deposit(int accountId, double amount) throws SQLException {
-		if (amount <= 0) {
+		if (amount <= 0 || !(dao.getAllApprovedAccountsId().contains(accountId))) {
 			return false;
 		}
 		
@@ -234,7 +238,7 @@ public class AccountManagementService implements Service {
 	}
 	
 	public boolean withdraw(int accountId, double amount) throws SQLException {
-		if (amount <= 0) {
+		if (amount <= 0 || !(dao.getAllApprovedAccountsId().contains(accountId))) {
 			return false;
 		}
 		
@@ -247,14 +251,14 @@ public class AccountManagementService implements Service {
 		Connection con = ConnectionUtility.getConnection();
 		dao.setConnection(con);
 		
-		if (amount <= 0 || !(dao.getAllApprovedAccountsId().contains(targetAccountId))) {
+		if (amount <= 0 || !(dao.getAllApprovedAccountsId().contains(targetAccountId)) || accountId == targetAccountId) {
 			return false;
 		}
 		
 		return dao.transfer(accountId, targetAccountId, amount);
 	}
 	
-	public List<BankAccount> getApprovedAccountsUser(int userId, String loginType) throws MoneyManagementException {
+	public List<BankAccount> getApprovedAccountsUser(int userId, String loginType) throws AccountManagementException {
 		List<BankAccount> listApprovedAccountsUser;
 		Connection con = ConnectionUtility.getConnection();
 		dao.setConnection(con);
@@ -266,7 +270,7 @@ public class AccountManagementService implements Service {
 				listApprovedAccountsUser = dao.getApprovedAccountsByUserId(userId);
 			}
 		} catch (SQLException e) {
-			throw new MoneyManagementException("Unable to retrieve accounts", e);
+			throw new AccountManagementException("Unable to retrieve accounts", e);
 		} finally {
 			try {
 				con.close();

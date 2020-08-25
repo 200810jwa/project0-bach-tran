@@ -9,7 +9,7 @@ import org.apache.log4j.Logger;
 import com.revature.dao.BankAccountDAO;
 import com.revature.dao.UserDAO;
 import com.revature.exceptions.BankAccountApplyException;
-import com.revature.exceptions.MoneyManagementException;
+import com.revature.exceptions.AccountManagementException;
 import com.revature.exceptions.RegistrationException;
 import com.revature.model.User;
 import com.revature.service.BankAccountApplicationsService;
@@ -22,7 +22,7 @@ public class AdminMainMenu extends Menu {
 	private Scanner scanner = new Scanner(System.in);
 	
 	public AdminMainMenu() {
-		super(new ArrayList<String>(Arrays.asList("Logout", "Cancel Accounts", "Manage Money of All Bank Accounts", "Create employee account", "Approve Pending Applications", "Deny Pending Applications", "View Approved Accounts", "View logged in user information")), "Welcome to the admin menu. Please select an option.");
+		super(new ArrayList<String>(Arrays.asList("Logout", "Cancel Empty Accounts", "Manage Money of All Bank Accounts", "Create employee account", "Approve Pending Applications", "Deny Pending Applications", "View Approved Accounts", "View logged in user information")), "Welcome to the admin menu. Please select an option.");
 	}
 
 	@Override
@@ -37,22 +37,14 @@ public class AdminMainMenu extends Menu {
 		case 1:
 			try {
 				new AccountManagementService(new BankAccountDAO(), "CancelAccount", "Admin").execute();
-			} catch (MoneyManagementException e1) {
+			} catch (AccountManagementException e1) {
 				log.error(e1.getMessage());
 				System.out.println("Unable to cancel account");
 			}
 			getState().displayCurrentMenu();
 			break;
 		case 2:
-			System.out.println("Please indicate whether you would like to view, deposit, withdraw, or transfer:");
-			String adminManageMoneyChoice = scanner.nextLine();
-			try {
-				new AccountManagementService(new BankAccountDAO(), "ManageMoney_" + adminManageMoneyChoice, "Admin").execute();
-			} catch (MoneyManagementException e2) {
-				log.error(e2.getMessage());
-				System.out.println(adminManageMoneyChoice.toUpperCase() + " failed. Please check if you have entered valid inputs and try again.");
-			}
-			getState().displayCurrentMenu();
+			getState().displayNextMenu(new AccountManagementMenu("Admin"));
 			break;
 		case 3:
 			try {

@@ -8,10 +8,8 @@ import org.apache.log4j.Logger;
 
 import com.revature.dao.BankAccountDAO;
 import com.revature.exceptions.BankAccountApplyException;
-import com.revature.exceptions.MoneyManagementException;
 import com.revature.model.User;
 import com.revature.service.BankAccountApplicationsService;
-import com.revature.service.AccountManagementService;
 
 public class CustomerMainMenu extends Menu {
 
@@ -34,15 +32,7 @@ public class CustomerMainMenu extends Menu {
 			getState().displayFirstMenu();
 			break;
 		case 1:
-			System.out.println("Please indicate whether you would like to view, deposit, withdraw, or transfer:");
-			String customerManageMoneyChoice = scanner.nextLine();
-			try {
-				new AccountManagementService(new BankAccountDAO(), "ManageMoney_" + customerManageMoneyChoice, "Customer").execute();
-			} catch (MoneyManagementException e2) {
-				log.error(e2.getMessage());
-				System.out.println(customerManageMoneyChoice + " failed. Please check if you have entered valid inputs and try again.");
-			}
-			getState().displayCurrentMenu();
+			getState().displayNextMenu(new AccountManagementMenu("Customer"));
 			break;
 		case 2:
 			try {

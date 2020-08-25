@@ -14,7 +14,7 @@ import java.util.Arrays;
 import org.junit.Test;
 
 import com.revature.dao.BankAccountDAO;
-import com.revature.exceptions.MoneyManagementException;
+import com.revature.exceptions.AccountManagementException;
 import com.revature.model.BankAccount;
 
 public class AccountManagementServiceTest {
@@ -23,7 +23,7 @@ public class AccountManagementServiceTest {
 	BankAccountDAO bankAccountDAO = mock(BankAccountDAO.class);
 	
 	@Test
-	public void testGetApprovedAccountsUser_Customer() throws SQLException, MoneyManagementException {
+	public void testGetApprovedAccountsUser_Customer() throws SQLException, AccountManagementException {
 		service = new AccountManagementService(bankAccountDAO, "ManageMoney_deposit", "Customer");
 		
 		when(bankAccountDAO.getApprovedAccountsByUserId(1)).thenReturn(Arrays.asList(new BankAccount(1, 3500, true, false),
@@ -34,7 +34,7 @@ public class AccountManagementServiceTest {
 	}
 	
 	@Test
-	public void testGetApprovedAcountsUser_Admin() throws MoneyManagementException, SQLException {
+	public void testGetApprovedAcountsUser_Admin() throws AccountManagementException, SQLException {
 		service = new AccountManagementService(bankAccountDAO, "ManageMoney_deposit", "Admin");
 		
 		when(bankAccountDAO.getAllApprovedAccounts()).thenReturn(Arrays.asList(new BankAccount(1, 3500, true, false),
@@ -85,7 +85,7 @@ public class AccountManagementServiceTest {
 	}
 
 	@Test
-	public void testGetCancelableAccounts() throws SQLException, MoneyManagementException {
+	public void testGetCancelableAccounts() throws SQLException, AccountManagementException {
 		service = new AccountManagementService(bankAccountDAO, "CancelAccount", "Admin");
 		
 		when(bankAccountDAO.getEmptyApprovedAccounts()).thenReturn(Arrays.asList(new BankAccount(3, 0, true, false), 
@@ -96,7 +96,7 @@ public class AccountManagementServiceTest {
 	}
 	
 	@Test
-	public void testCancelAccount() throws SQLException, MoneyManagementException {
+	public void testCancelAccount() throws SQLException, AccountManagementException {
 		service = new AccountManagementService(bankAccountDAO, "CancelAccount", "Admin");
 		
 		when(bankAccountDAO.deleteAccount(4)).thenReturn(1);
@@ -107,11 +107,11 @@ public class AccountManagementServiceTest {
 	}
 	
 	@Test
-	public void testIsJoint() throws SQLException {
+	public void testGetJointIDs() throws SQLException {
 		service = new AccountManagementService(bankAccountDAO, "ManageMoney_deposit", "Customer");
 		
 		when(bankAccountDAO.getAccountIdListAllApprovedJoint()).thenReturn(Arrays.asList(1));
 		
-		assertTrue(service.isJoint(1));
+		assertEquals(Arrays.asList(1), service.getJointIDs());
 	}
 }
