@@ -30,6 +30,7 @@ public class BankAccountApplicationsService implements Service {
 		this.executeType = executeType;
 	}	
 
+	// UI Method
 	@Override
 	public void execute() throws BankAccountApplyException {
 		if (executeType.equals("apply")) {
@@ -144,7 +145,7 @@ public class BankAccountApplicationsService implements Service {
 		} else if (executeType.equals("employeeViewApproved")) {
 			try {
 				dao.setConnection(ConnectionUtility.getConnection());
-				List<Pair<User, BankAccount>> pendingUserAccountPairs = dao.getAllApproved();
+				List<Pair<User, BankAccount>> pendingUserAccountPairs = dao.getAllApprovedUserBankAccountPairs();
 				for (Pair<User, BankAccount> pair : pendingUserAccountPairs) {
 					System.out.println(pair.getLeft());
 					System.out.println(pair.getRight());
@@ -213,6 +214,7 @@ public class BankAccountApplicationsService implements Service {
 		}
 	}
 	
+	// Service Methods
 	public boolean applyJoint(int userId, int accountId) throws BankAccountApplyException {
 		Connection con = ConnectionUtility.getConnection();
 		dao.setConnection(con);
@@ -298,7 +300,7 @@ public class BankAccountApplicationsService implements Service {
 		List<BankAccount> deniedAccounts = dao.getDeniedAccountsByUserId(userId); // Denied
 		List<BankAccount> approvedAccounts = dao.getApprovedAccountsByUserId(userId); // Approved
 		List<Integer> accountIdMultipleApprovedOrPending = dao.getAccountIdListMultipleApprovedOrPending(); // All approved and/or pending
-		List<Integer> accountIdMultipleAllApproved = dao.getAccountIdListAllApproved(); // All approved, no pending
+		List<Integer> accountIdMultipleAllApproved = dao.getAccountIdListAllApprovedJoint(); // All approved, no pending
 		
 		List<String> stringList = new ArrayList<>();
 		

@@ -1,5 +1,6 @@
 package com.revature.exceptions;
 
+@SuppressWarnings("serial")
 public class MoneyManagementException extends Exception {
 
 	public MoneyManagementException() {

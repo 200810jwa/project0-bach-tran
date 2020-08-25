@@ -2,7 +2,6 @@ package com.revature.menus;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 import org.apache.log4j.Logger;
@@ -10,7 +9,6 @@ import org.apache.log4j.Logger;
 import com.revature.dao.BankAccountDAO;
 import com.revature.exceptions.BankAccountApplyException;
 import com.revature.exceptions.MoneyManagementException;
-import com.revature.model.BankAccount;
 import com.revature.model.User;
 import com.revature.service.BankAccountApplicationsService;
 import com.revature.service.AccountManagementService;
@@ -42,7 +40,7 @@ public class CustomerMainMenu extends Menu {
 				new AccountManagementService(new BankAccountDAO(), "ManageMoney_" + customerManageMoneyChoice, "Customer").execute();
 			} catch (MoneyManagementException e2) {
 				log.error(e2.getMessage());
-				System.out.println(customerManageMoneyChoice + " failed");
+				System.out.println(customerManageMoneyChoice + " failed. Please check if you have entered valid inputs and try again.");
 			}
 			getState().displayCurrentMenu();
 			break;

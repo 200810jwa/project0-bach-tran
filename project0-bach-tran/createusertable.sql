@@ -1,9 +1,0 @@
-CREATE TABLE "user" (
-	id SERIAL PRIMARY KEY,
-	username VARCHAR(30) NOT NULL,
-	password VARCHAR(64) NOT NULL,
-	firstname VARCHAR(255) NOT NULL,
-	lastname VARCHAR(255) NOT NULL,
-	phone VARCHAR(12) NOT NULL,
-	accounttype VARCHAR(10) NOT NULL
-);

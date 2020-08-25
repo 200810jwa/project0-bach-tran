@@ -503,3 +503,100 @@
 2020-08-23 21:23:56 INFO  AccountManagementService:139 - Admin admin successfully withdrew 1000.0 from accountID 2
 2020-08-23 21:24:02 INFO  AccountManagementService:139 - Admin admin successfully withdrew 1000.0 from accountID 5
 2020-08-23 21:24:45 INFO  AccountManagementService:151 - Admin admin successfully transferred 1750.0 from accountID 2 to accountID 5
+2020-08-24 13:23:44 INFO  LoginService:62 - admin logged in successfully
+2020-08-24 13:24:10 INFO  LoginService:62 - admin logged in successfully
+2020-08-24 14:05:09 ERROR CustomerRegistrationLoginMenu:42 - Username bach_tran does not exist!
+2020-08-24 14:05:29 INFO  RegistrationService:96 - New user bach_tran of type Customer registered successfully
+2020-08-24 14:05:44 INFO  BankAccountApplicationsService:48 - User bach_tran has applied for a bank account
+2020-08-24 14:12:01 ERROR CustomerRegistrationLoginMenu:53 - Blank fields are not allowed. Blank registration fields were entered.
+2020-08-24 14:12:11 ERROR CustomerRegistrationLoginMenu:42 - Username bach_tran does not exist!
+2020-08-24 14:12:39 INFO  RegistrationService:96 - New user bach_tran of type Customer registered successfully
+2020-08-24 14:12:50 ERROR CustomerRegistrationLoginMenu:42 - Login attempt for user bach_tran failed.
+2020-08-24 14:12:57 ERROR CustomerRegistrationLoginMenu:42 - Login attempt for user bach_tran failed.
+2020-08-24 14:13:03 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-24 14:13:32 ERROR CustomerMainMenu:62 - A previous pending or denied joint application already exists, or the accountID supplied does not exist
+2020-08-24 14:13:44 INFO  BankAccountApplicationsService:48 - User bach_tran has applied for a bank account
+2020-08-24 14:13:49 ERROR CustomerMainMenu:53 - User bach_tran tried to apply, but already has a bank account application pending
+2020-08-24 14:13:55 ERROR CustomerMainMenu:62 - User bach_tran tried to apply, but already has a bank account application pending
+2020-08-24 14:14:20 INFO  LoginService:62 - admin logged in successfully
+2020-08-24 14:14:26 INFO  BankAccountApplicationsService:118 - Admin admin successfully approved account ID 1 for user bach_tran
+2020-08-24 14:14:38 ERROR CustomerRegistrationLoginMenu:42 - Login attempt for user bach_tran failed.
+2020-08-24 14:14:45 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-24 14:14:50 ERROR CustomerMainMenu:62 - A previous pending or denied joint application already exists, or the accountID supplied does not exist
+2020-08-24 14:15:15 ERROR CustomerMainMenu:44 - bach_tran failed to deposit 0.0 to accountID 1
+2020-08-24 14:15:23 INFO  AccountManagementService:129 - Customer bach_tran successfully deposited 1000.0 to accountID 1
+2020-08-24 14:15:58 INFO  RegistrationService:96 - New user jane_doe of type Customer registered successfully
+2020-08-24 14:16:03 INFO  BankAccountApplicationsService:202 - jane_doe successfully applied for a joint account with existing accountID 1
+2020-08-24 14:16:15 ERROR CustomerMainMenu:53 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-24 14:16:19 ERROR CustomerMainMenu:62 - User jane_doe tried to apply, but already has a bank account application pending
+2020-08-24 14:16:27 INFO  LoginService:62 - admin logged in successfully
+2020-08-24 14:16:52 INFO  RegistrationService:96 - New user employee1 of type Employee registered successfully
+2020-08-24 14:17:01 INFO  LoginService:62 - employee1 logged in successfully
+2020-08-24 14:17:16 INFO  BankAccountApplicationsService:118 - Employee employee1 successfully approved account ID 1 for user jane_doe
+2020-08-24 14:17:47 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-24 14:18:01 INFO  AccountManagementService:139 - Customer jane_doe successfully withdrew 500.0 from accountID 1
+2020-08-24 14:18:10 ERROR CustomerMainMenu:62 - A previous pending or denied joint application already exists, or the accountID supplied does not exist
+2020-08-24 14:18:16 INFO  BankAccountApplicationsService:48 - User jane_doe has applied for a bank account
+2020-08-24 14:18:34 INFO  LoginService:62 - admin logged in successfully
+2020-08-24 14:18:54 INFO  BankAccountApplicationsService:127 - Admin admin successfully denied account ID 2 for user jane_doe
+2020-08-24 14:19:21 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-24 14:19:33 INFO  BankAccountApplicationsService:48 - User jane_doe has applied for a bank account
+2020-08-24 14:19:45 INFO  LoginService:62 - employee1 logged in successfully
+2020-08-24 14:19:49 INFO  BankAccountApplicationsService:118 - Employee employee1 successfully approved account ID 3 for user jane_doe
+2020-08-24 14:19:54 INFO  LoginService:62 - admin logged in successfully
+2020-08-24 14:20:06 INFO  AccountManagementService:129 - Admin admin successfully deposited 1000.0 to accountID 3
+2020-08-24 14:20:26 INFO  AccountManagementService:139 - Admin admin successfully withdrew 1000.0 from accountID 3
+2020-08-24 14:20:32 INFO  AccountManagementService:69 - Admin admin successfully canceled account 3
+2020-08-24 14:21:01 INFO  LoginService:62 - jane_doe logged in successfully
+2020-08-24 14:21:24 INFO  LoginService:62 - employee1 logged in successfully
+2020-08-24 14:21:41 INFO  LoginService:62 - admin logged in successfully
+2020-08-24 15:18:56 ERROR CustomerRegistrationLoginMenu:42 - Login attempt for user bach_tran failed.
+2020-08-24 15:19:02 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-24 15:25:52 INFO  LoginService:62 - bach_tran logged in successfully
+2020-08-24 17:08:07 ERROR CustomerRegistrationLoginMenu:42 - Login attempt for user bach_tran failed.
+2020-08-24 17:08:14 INFO  LoginService:63 - bach_tran logged in successfully
+2020-08-24 17:08:31 INFO  AccountManagementService:128 - Customer bach_tran successfully deposited 500.0 to accountID 1
+2020-08-24 17:08:35 ERROR CustomerMainMenu:42 - bach_tran failed to deposit 0.0 to accountID 1
+2020-08-24 17:08:52 ERROR CustomerMainMenu:42 - bach_tran failed to deposit -1000.0 to accountID 1
+2020-08-24 17:09:08 ERROR CustomerMainMenu:42 - bach_tran failed to withdraw 1001.0 from accountID 1
+2020-08-24 17:09:44 INFO  AccountManagementService:150 - Customer bach_tran successfully transferred 500.0 from accountID 1 to accountID 2
+2020-08-24 17:09:58 ERROR CustomerMainMenu:42 - bach_tran failed to transfer 501.0 from accountID 1 to accountID 2
+2020-08-24 17:10:13 INFO  AccountManagementService:150 - Customer bach_tran successfully transferred 500.0 from accountID 1 to accountID 2
+2020-08-24 17:10:38 INFO  LoginService:63 - jane_doe logged in successfully
+2020-08-24 18:40:27 ERROR CustomerRegistrationLoginMenu:42 - Login attempt for user bach_tran failed.
+2020-08-24 18:40:32 INFO  LoginService:63 - bach_tran logged in successfully
+2020-08-24 18:40:41 INFO  AccountManagementService:128 - Customer bach_tran successfully deposited 1000.0 to accountID 1
+2020-08-24 18:40:54 ERROR CustomerMainMenu:42 - bach_tran failed to transfer 500.0 from accountID 1 to accountID 2
+2020-08-24 18:48:34 ERROR CustomerRegistrationLoginMenu:42 - Login attempt for user bach_tran failed.
+2020-08-24 18:48:39 INFO  LoginService:63 - bach_tran logged in successfully
+2020-08-24 18:48:54 ERROR CustomerMainMenu:42 - bach_tran failed to transfer 500.0 from accountID 1 to accountID 10
+2020-08-24 18:50:02 ERROR CustomerMainMenu:42 - bach_tran failed to transfer 2.0 from accountID 1 to accountID 2
+2020-08-24 18:50:32 INFO  LoginService:63 - jane_doe logged in successfully
+2020-08-24 19:11:24 INFO  LoginService:63 - bach_tran logged in successfully
+2020-08-24 19:12:37 INFO  LoginService:63 - bach_tran logged in successfully
+2020-08-24 19:12:49 ERROR CustomerMainMenu:42 - bach_tran failed to transfer 500.0 from accountID 1 to accountID 3
+2020-08-24 19:12:59 ERROR CustomerMainMenu:42 - bach_tran failed to transfer 500.0 from accountID 1 to accountID 2
+2020-08-24 19:13:34 INFO  LoginService:63 - jane_doe logged in successfully
+2020-08-24 19:13:40 ERROR CustomerMainMenu:42 - Incorrect operation type specified. Type needs to be 'view', 'deposit', 'withdraw', or 'transfer'
+2020-08-24 19:13:45 INFO  BankAccountApplicationsService:49 - User jane_doe has applied for a bank account
+2020-08-24 19:13:53 INFO  LoginService:63 - admin logged in successfully
+2020-08-24 19:13:58 INFO  BankAccountApplicationsService:119 - Admin admin successfully approved account ID 4 for user jane_doe
+2020-08-24 19:14:12 ERROR MainMenu:38 - Username  does not exist!
+2020-08-24 19:14:17 INFO  LoginService:63 - jane_doe logged in successfully
+2020-08-24 19:14:40 ERROR CustomerMainMenu:42 - jane_doe failed to transfer 500.0 from accountID 1 to accountID 2
+2020-08-24 19:14:54 INFO  AccountManagementService:157 - Customer jane_doe successfully transferred 500.0 from accountID 1 to accountID 4
+2020-08-24 19:15:16 ERROR CustomerMainMenu:60 - A previous pending or denied joint application already exists, or the accountID supplied does not exist
+2020-08-24 19:15:38 INFO  AccountManagementService:135 - Customer jane_doe successfully deposited 500.0 to accountID 1
+2020-08-24 19:15:42 INFO  AccountManagementService:135 - Customer jane_doe successfully deposited 500.0 to accountID 4
+2020-08-24 19:15:54 ERROR CustomerMainMenu:42 - jane_doe failed to withdraw 1001.0 from accountID 1
+2020-08-24 19:16:09 ERROR CustomerMainMenu:42 - jane_doe failed to withdraw -10.0 from accountID 1
+2020-08-24 19:16:18 INFO  AccountManagementService:145 - Customer jane_doe successfully withdrew 250.0 from accountID 1
+2020-08-24 19:16:31 INFO  AccountManagementService:145 - Customer jane_doe successfully withdrew 500.0 from accountID 4
+2020-08-24 19:16:46 ERROR CustomerRegistrationLoginMenu:42 - Login attempt for user bach_tran failed.
+2020-08-24 19:16:50 INFO  LoginService:63 - bach_tran logged in successfully
+2020-08-24 19:17:14 INFO  AccountManagementService:157 - Customer bach_tran successfully transferred 750.0 from accountID 1 to accountID 4
+2020-08-24 19:17:20 ERROR CustomerRegistrationLoginMenu:42 - Username  does not exist!
+2020-08-24 19:17:30 INFO  LoginService:63 - admin logged in successfully
+2020-08-24 19:18:18 INFO  AccountManagementService:135 - Admin admin successfully deposited 500.0 to accountID 1
+2020-08-24 19:18:34 INFO  LoginService:63 - jane_doe logged in successfully
+2020-08-24 19:18:48 INFO  AccountManagementService:157 - Customer jane_doe successfully transferred 500.0 from accountID 1 to accountID 4

@@ -11,10 +11,6 @@ import static org.mockito.AdditionalMatchers.*;
 import java.sql.SQLException;
 import java.util.Arrays;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.revature.dao.BankAccountDAO;
@@ -75,6 +71,8 @@ public class AccountManagementServiceTest {
 	public void testTransfer() throws SQLException {
 		service = new AccountManagementService(bankAccountDAO, "ManageMoney_transfer", "Customer");
 		
+		when(bankAccountDAO.getAllApprovedAccountsId()).thenReturn(Arrays.asList(1,2));
+		
 		when(bankAccountDAO.transfer(eq(1), eq(2), gt(3500.0))).thenReturn(false);
 		assertFalse(service.transfer(1, 2, 3501));
 		
@@ -106,5 +104,14 @@ public class AccountManagementServiceTest {
 		
 		assertTrue(service.cancelAccount(4));
 		assertFalse(service.cancelAccount(100));
+	}
+	
+	@Test
+	public void testIsJoint() throws SQLException {
+		service = new AccountManagementService(bankAccountDAO, "ManageMoney_deposit", "Customer");
+		
+		when(bankAccountDAO.getAccountIdListAllApprovedJoint()).thenReturn(Arrays.asList(1));
+		
+		assertTrue(service.isJoint(1));
 	}
 }

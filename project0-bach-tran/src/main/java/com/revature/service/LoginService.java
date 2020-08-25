@@ -36,6 +36,7 @@ public class LoginService implements Service {
 		this.accDao = accDao;
 	}
 	
+	// UI Method
 	@Override
 	public void execute() throws LoginException {
 		System.out.println(this.loginType + " Login:");
@@ -69,6 +70,7 @@ public class LoginService implements Service {
 		state.setApprovedAccountsUser(listApprovedAccountsUser);
 	}
 	
+	// Service Methods
 	public boolean checkAuthorization(String userAccountType) {
 		// Code here
 		if (this.loginType.equals("Customer")) {

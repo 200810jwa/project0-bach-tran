@@ -13,7 +13,6 @@ import java.util.List;
 import org.apache.commons.lang3.tuple.MutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 
-import com.revature.exceptions.MoneyManagementException;
 import com.revature.model.BankAccount;
 import com.revature.model.User;
 
@@ -236,7 +235,7 @@ public class BankAccountDAO {
 		return list;
 	}
 	
-	public List<Integer> getAccountIdListAllApproved() throws SQLException {
+	public List<Integer> getAccountIdListAllApprovedJoint() throws SQLException {
 		PreparedStatement stmt;
 		List<Integer> list = new ArrayList<>();
 		
@@ -255,7 +254,7 @@ public class BankAccountDAO {
 		return list;
 	}
 	
-	public List<Pair<User, BankAccount>> getAllApproved() throws SQLException {
+	public List<Pair<User, BankAccount>> getAllApprovedUserBankAccountPairs() throws SQLException {
 		List<Pair<User, BankAccount>> list = new ArrayList<>();
 		
 		PreparedStatement stmt;
@@ -337,11 +336,7 @@ public class BankAccountDAO {
 		
 		return list;
 	}
-	
-	public List<BankAccount> getAllPendingAccounts() {		
-		return null;
-	}
-	
+		
 	public List<BankAccount> getAllApprovedAccounts() throws SQLException {
 		PreparedStatement stmt;
 		
@@ -366,6 +361,31 @@ public class BankAccountDAO {
 			
 			BankAccount account = new BankAccount(accountId, balance, approved, pending);
 			list.add(account);
+		}
+		
+		return list;
+	}
+	
+	public List<Integer> getAllApprovedAccountsId() throws SQLException {
+		PreparedStatement stmt;
+		
+		String sql = "SELECT DISTINCT " + 
+				"b.id FROM " + 
+				"(SELECT * FROM users u " + 
+				"LEFT JOIN user_account_join j " + 
+				"ON u.id = j.user_id " + 
+				"WHERE approved = true AND pending = false) c " + 
+				"LEFT JOIN bankaccounts b " + 
+				"ON c.account_id = b.id";
+		
+		stmt = con.prepareStatement(sql);
+		
+		ResultSet rs = stmt.executeQuery();
+		List<Integer> list = new ArrayList<>();
+		while (rs.next()) {
+			int accountId = rs.getInt(1);
+			
+			list.add(accountId);
 		}
 		
 		return list;
@@ -501,7 +521,7 @@ public class BankAccountDAO {
 
 	public int deleteAccount(int accountId) throws SQLException {
 		PreparedStatement stmt;
-		
+
 		String sql = "DELETE FROM bankaccounts "
 				+ "WHERE id = ?";
 		

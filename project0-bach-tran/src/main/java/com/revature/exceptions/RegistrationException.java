@@ -1,5 +1,6 @@
 package com.revature.exceptions;
 
+@SuppressWarnings("serial")
 public class RegistrationException extends Exception {
 
 	public RegistrationException() {

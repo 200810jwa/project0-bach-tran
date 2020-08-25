@@ -9,8 +9,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import com.revature.dao.BankAccountDAO;
@@ -46,7 +44,7 @@ public class BankAccountApplicationsServiceTest {
 		when(dao.getPendingAccountsByUserId(1)).thenReturn(Arrays.asList(new BankAccount(4, 0, false, true)));
 		when(dao.getDeniedAccountsByUserId(1)).thenReturn(Arrays.asList(new BankAccount(1, 0, false, false)));
 		when(dao.getAccountIdListMultipleApprovedOrPending()).thenReturn(Arrays.asList(6));
-		when(dao.getAccountIdListAllApproved()).thenReturn(Arrays.asList(6));
+		when(dao.getAccountIdListAllApprovedJoint()).thenReturn(Arrays.asList(6));
 		
 		List<String> expected = Arrays.asList("Bank Account ID 6: Approved (joint)", "Bank Account ID 4: Pending", "Bank Account ID 1: Denied");
 		assertArrayEquals(expected.toArray(), service.describeApprovedPendingDeniedAccounts(1).toArray());
@@ -60,7 +58,7 @@ public class BankAccountApplicationsServiceTest {
 		when(dao.getPendingAccountsByUserId(1)).thenReturn(Arrays.asList(new BankAccount(4, 0, false, true)));
 		when(dao.getDeniedAccountsByUserId(1)).thenReturn(Arrays.asList(new BankAccount(1, 0, false, false)));
 		when(dao.getAccountIdListMultipleApprovedOrPending()).thenReturn(Arrays.asList(6));
-		when(dao.getAccountIdListAllApproved()).thenReturn(Arrays.asList());
+		when(dao.getAccountIdListAllApprovedJoint()).thenReturn(Arrays.asList());
 		
 		List<String> expected = Arrays.asList("Bank Account ID 6: Approved (pending joint)", "Bank Account ID 4: Pending", "Bank Account ID 1: Denied");
 		assertArrayEquals(expected.toArray(), service.describeApprovedPendingDeniedAccounts(1).toArray());
@@ -84,6 +82,7 @@ public class BankAccountApplicationsServiceTest {
 		service = new BankAccountApplicationsService(dao, "applyJoint");
 		
 		when(dao.checkExistingJointApplication(1, 6)).thenReturn(false);
+		when(dao.checkExistingAccount(6)).thenReturn(true);
 		when(dao.applyforJointBankAccount(1, 6)).thenReturn(1);
 		
 		assertTrue(service.applyJoint(1, 6));
@@ -94,6 +93,7 @@ public class BankAccountApplicationsServiceTest {
 		service = new BankAccountApplicationsService(dao, "applyJoint");
 		
 		when(dao.checkExistingJointApplication(1, 6)).thenReturn(true);
+		when(dao.checkExistingAccount(6)).thenReturn(true);
 		when(dao.applyforJointBankAccount(1, 6)).thenReturn(1);
 		
 		assertFalse(service.applyJoint(1, 6));
@@ -104,6 +104,7 @@ public class BankAccountApplicationsServiceTest {
 		service = new BankAccountApplicationsService(dao, "applyJoint");
 		
 		when(dao.checkExistingJointApplication(1, 6)).thenReturn(false);
+		when(dao.checkExistingAccount(6)).thenReturn(true);
 		when(dao.applyforJointBankAccount(1, 6)).thenReturn(0);
 		
 		assertFalse(service.applyJoint(1, 6));

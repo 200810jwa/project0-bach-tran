@@ -8,6 +8,8 @@ public class Driver {
 		
 		StateSingleton state = StateSingleton.getInstance();
 		
+		System.out.println("Welcome to the Banking App!");
+		
 		state.displayNextMenu(new MainMenu());
 		
 		System.out.println("Goodbye!");

@@ -2,7 +2,6 @@ package com.revature.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
@@ -11,7 +10,6 @@ import org.apache.log4j.Logger;
 
 import com.revature.dao.BankAccountDAO;
 import com.revature.dao.ConnectionUtility;
-import com.revature.exceptions.LoginException;
 import com.revature.exceptions.MoneyManagementException;
 import com.revature.main.StateSingleton;
 import com.revature.model.BankAccount;
@@ -31,6 +29,7 @@ public class AccountManagementService implements Service {
 		this.loginType = loginType;
 	}
 
+	// UI Method
 	@Override
 	public void execute() throws MoneyManagementException {
 		List<BankAccount> listApprovedAccountsUser = getApprovedAccountsUser(state.getCurrentUser().getId(), loginType);
@@ -95,6 +94,13 @@ public class AccountManagementService implements Service {
 				System.out.print(accountCounter + ".) ");
 				System.out.println("Account ID: " + b.getId());
 				System.out.println("Balance: " + b.getBalance());
+				try {
+					if(isJoint(b.getId())) {
+						System.out.println("JOINT ACCOUNT");
+					}
+				} catch (SQLException e) {
+					throw new MoneyManagementException("An error occurred while trying to retrieve whether the accounts are joint from the DB");
+				}
 				System.out.println();
 			}
 			
@@ -166,6 +172,18 @@ public class AccountManagementService implements Service {
 		}
 	}
 	
+	public boolean isJoint(int id) throws SQLException {
+		Connection con = ConnectionUtility.getConnection();
+		dao.setConnection(con);
+		
+		if (dao.getAccountIdListAllApprovedJoint().contains(id)) {
+			return true;
+		}
+		
+		return false;
+	}
+
+	// Service Methods
 	public boolean cancelAccount(int accountId) throws MoneyManagementException {
 		int result = 0;
 		Connection con = ConnectionUtility.getConnection();
@@ -226,12 +244,13 @@ public class AccountManagementService implements Service {
 	}
 	
 	public boolean transfer(int accountId, int targetAccountId, double amount) throws SQLException {
-		if (amount <= 0) {
+		Connection con = ConnectionUtility.getConnection();
+		dao.setConnection(con);
+		
+		if (amount <= 0 || !(dao.getAllApprovedAccountsId().contains(targetAccountId))) {
 			return false;
 		}
 		
-		Connection con = ConnectionUtility.getConnection();
-		dao.setConnection(con);
 		return dao.transfer(accountId, targetAccountId, amount);
 	}
 	

@@ -111,13 +111,11 @@ public class RegistrationServiceTest {
 	
 	@Test(expected=RegistrationException.class)
 	public void testRegister_twice_sameUsername() throws RegistrationException {
-		User user = null;
-		
 		doNothing().doThrow(new RegistrationException()).when(dao).registerUser(eq("bob_smith"), anyString(), anyString(), anyString(), anyString(), anyString(), anyString());
 		
-		user = service.register("bob_smith", "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5",
+		service.register("bob_smith", "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5",
 				"Bobby", "Smith", "512-826-3247", "bob_smith@outlook.com", "Customer");
-		user = service.register("bob_smith", "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5",
+		service.register("bob_smith", "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5",
 				"Bob", "Smith", "512-826-3248", "bob_smith@outlook.com", "Customer");
 	}
 	

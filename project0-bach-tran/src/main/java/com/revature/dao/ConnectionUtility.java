@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import org.postgresql.Driver;
 
 public class ConnectionUtility {
-	public static final String URL = "jdbc:postgresql://training-ohio.clwebyd8kmnl.us-east-2.rds.amazonaws.com/T200810";
+	public static final String URL = "jdbc:postgresql://training-ohio.clwebyd8kmnl.us-east-2.rds.amazonaws.com/T200810?currentSchema=my_project0";
 	public static final String USER = "root";
 	public static final String PASS = "password";
 	
@@ -23,6 +23,7 @@ public class ConnectionUtility {
 	        throw new RuntimeException("Error connecting to the database", ex);
 	    }
 	}
+// Test connection code ***********************
 	
 //	public static void main(String[] args) {
 //		Connection con = ConnectionUtility.getConnection();

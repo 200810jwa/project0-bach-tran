@@ -35,6 +35,7 @@ public class RegistrationService implements Service {
 		this.accountType = accountType;
 	}
 
+	// UI Method
 	@Override
 	public void execute() throws RegistrationException {
 		System.out.println(this.accountType + " Registration:");
@@ -100,6 +101,7 @@ public class RegistrationService implements Service {
 		}
 	}
 	
+	// Service Methods
 	public boolean verifyPhoneNumber(String phone) {
 		Pattern pattern = Pattern.compile("^(\\d{3}[- .]?){2}\\d{4}$");
 	    Matcher matcher = pattern.matcher(phone);

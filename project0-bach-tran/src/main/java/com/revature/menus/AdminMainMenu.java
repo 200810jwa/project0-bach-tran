@@ -50,7 +50,7 @@ public class AdminMainMenu extends Menu {
 				new AccountManagementService(new BankAccountDAO(), "ManageMoney_" + adminManageMoneyChoice, "Admin").execute();
 			} catch (MoneyManagementException e2) {
 				log.error(e2.getMessage());
-				System.out.println(adminManageMoneyChoice + " failed");
+				System.out.println(adminManageMoneyChoice.toUpperCase() + " failed. Please check if you have entered valid inputs and try again.");
 			}
 			getState().displayCurrentMenu();
 			break;
