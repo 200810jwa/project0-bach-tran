@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.revature.exceptions.LoginException;
@@ -18,8 +19,32 @@ public class UserDAO {
 		this.con = con;
 	}
 	
-	public List<User> getAllUsers() {
-		return null;
+	public List<User> getAllUsers() throws SQLException {
+		PreparedStatement stmt;
+		
+		String sql = "SELECT id, username, password, firstname, lastname, phone, email, accounttype "
+				+ "FROM users";
+		
+		stmt = con.prepareStatement(sql);
+		
+		ResultSet rs = stmt.executeQuery();
+		
+		List<User> list = new ArrayList<>();
+		while (rs.next()) {
+			int id = rs.getInt(1);
+			String username = rs.getString(2);
+			String password = rs.getString(3);
+			String firstname = rs.getString(4);
+			String lastname = rs.getString(5);
+			String phone = rs.getString(6);
+			String email = rs.getString(7);
+			String accountType = rs.getString(8);
+			
+			User user = new User(id, username, password, firstname, lastname, phone, email, accountType);
+			list.add(user);
+		}
+		
+		return list;
 	}
 	
 	public User loginUser(String username, String password) throws LoginException {

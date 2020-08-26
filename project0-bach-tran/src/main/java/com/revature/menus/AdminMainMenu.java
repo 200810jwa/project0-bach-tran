@@ -11,10 +11,12 @@ import com.revature.dao.UserDAO;
 import com.revature.exceptions.BankAccountApplyException;
 import com.revature.exceptions.AccountManagementException;
 import com.revature.exceptions.RegistrationException;
+import com.revature.exceptions.UserListException;
 import com.revature.model.User;
 import com.revature.service.BankAccountApplicationsService;
 import com.revature.service.AccountManagementService;
 import com.revature.service.RegistrationService;
+import com.revature.service.UserListService;
 
 public class AdminMainMenu extends Menu {
 
@@ -22,7 +24,7 @@ public class AdminMainMenu extends Menu {
 	private Scanner scanner = new Scanner(System.in);
 	
 	public AdminMainMenu() {
-		super(new ArrayList<String>(Arrays.asList("Logout", "Cancel Empty Accounts", "Manage Money of All Bank Accounts", "Create employee account", "Approve Pending Applications", "Deny Pending Applications", "View Approved Accounts", "View logged in user information")), "Welcome to the admin menu. Please select an option.");
+		super(new ArrayList<String>(Arrays.asList("Logout", "Cancel Empty Accounts", "Manage Money of All Bank Accounts", "Create employee account", "Approve Pending Applications", "Deny Pending Applications", "View Approved Accounts", "List All Users", "View logged in user information")), "Welcome to the admin menu. Please select an option.");
 	}
 
 	@Override
@@ -83,6 +85,15 @@ public class AdminMainMenu extends Menu {
 			getState().displayCurrentMenu();
 			break;
 		case 7:
+			try {
+				new UserListService(new UserDAO(), "viewUsers").execute();
+			} catch (UserListException e) {
+				log.error(e.getMessage());
+				System.out.println("Unable to view users");
+			}
+			getState().displayCurrentMenu();
+			break;
+		case 8:
 			User current = getState().getCurrentUser();
 			System.out.println("========USER INFORMATION========");
 			System.out.println("UserID: " + current.getId());

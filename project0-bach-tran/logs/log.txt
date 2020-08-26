@@ -761,3 +761,24 @@
 2020-08-25 09:43:14 INFO  AccountManagementService:141 - Customer jason_doe successfully deposited 4500.0 to accountID 2
 2020-08-25 09:43:23 INFO  AccountManagementService:151 - Customer jason_doe successfully withdrew 250.0 from accountID 2
 2020-08-25 09:43:35 INFO  LoginService:63 - john_doe logged in successfully
+2020-08-25 20:58:13 INFO  LoginService:63 - employee1 logged in successfully
+2020-08-25 20:58:55 INFO  LoginService:63 - employee1 logged in successfully
+2020-08-25 21:00:33 ERROR MainMenu:38 - Username employee does not exist!
+2020-08-25 21:00:37 INFO  LoginService:63 - employee1 logged in successfully
+2020-08-25 21:01:58 INFO  LoginService:63 - employee1 logged in successfully
+2020-08-25 21:03:24 INFO  LoginService:63 - admin logged in successfully
+2020-08-25 21:04:10 ERROR AdminMainMenu:55 - Blank fields are not allowed. Blank registration fields were entered.
+2020-08-25 21:19:42 ERROR CustomerRegistrationLoginMenu:42 - Username  does not exist!
+2020-08-25 21:19:51 ERROR MainMenu:38 - bach_tran is not authorized for loginType Employee
+2020-08-25 21:20:48 INFO  LoginService:63 - employee1 logged in successfully
+2020-08-25 21:25:24 INFO  LoginService:63 - admin logged in successfully
+2020-08-25 21:27:31 INFO  LoginService:63 - admin logged in successfully
+2020-08-25 21:27:49 INFO  LoginService:63 - admin logged in successfully
+2020-08-25 21:30:33 INFO  LoginService:63 - admin logged in successfully
+2020-08-25 21:35:26 INFO  LoginService:63 - employee1 logged in successfully
+2020-08-25 21:36:08 INFO  LoginService:63 - employee1 logged in successfully
+2020-08-25 21:36:31 INFO  LoginService:63 - admin logged in successfully
+2020-08-25 21:36:54 ERROR AdminMainMenu:55 - Blank fields are not allowed. Blank registration fields were entered.
+2020-08-25 21:38:02 INFO  LoginService:63 - employee1 logged in successfully
+2020-08-25 21:38:51 INFO  LoginService:63 - employee1 logged in successfully
+2020-08-25 21:57:24 ERROR CustomerRegistrationLoginMenu:42 - Username  does not exist!

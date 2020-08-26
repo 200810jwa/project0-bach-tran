@@ -7,9 +7,12 @@ import java.util.Scanner;
 import org.apache.log4j.Logger;
 
 import com.revature.dao.BankAccountDAO;
+import com.revature.dao.UserDAO;
 import com.revature.exceptions.BankAccountApplyException;
+import com.revature.exceptions.UserListException;
 import com.revature.model.User;
 import com.revature.service.BankAccountApplicationsService;
+import com.revature.service.UserListService;
 
 public class EmployeeMainMenu extends Menu {
 
@@ -17,9 +20,9 @@ public class EmployeeMainMenu extends Menu {
 	private Scanner scanner = new Scanner(System.in);
 	
 	public EmployeeMainMenu() {
-		super(new ArrayList<>(Arrays.asList("Logout", "Approve Pending Applications", "Deny Pending Applications", "View Approved Accounts", "View logged in user information")), "Welcome to the employee main menu. Please select an option.");
+		super(new ArrayList<>(Arrays.asList("Logout", "Approve Pending Applications", "Deny Pending Applications", "View Approved Accounts", "List All Users", "View logged in user information")), "Welcome to the employee main menu. Please select an option.");
 	}
-
+	
 	@Override
 	public void display() {
 		// TODO Auto-generated method stub
@@ -58,6 +61,15 @@ public class EmployeeMainMenu extends Menu {
 			getState().displayCurrentMenu();
 			break;
 		case 4:
+			try {
+				new UserListService(new UserDAO(), "viewUsers").execute();
+			} catch (UserListException e) {
+				log.error(e.getMessage());
+				System.out.println("Unable to view users");
+			}
+			getState().displayCurrentMenu();
+			break;
+		case 5:
 			User current = getState().getCurrentUser();
 			System.out.println("========USER INFORMATION========");
 			System.out.println("UserID: " + current.getId());
