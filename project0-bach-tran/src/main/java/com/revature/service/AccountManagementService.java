@@ -228,7 +228,12 @@ public class AccountManagementService implements Service {
 	}
 
 	public boolean deposit(int accountId, double amount) throws SQLException {
-		if (amount <= 0 || !(dao.getAllApprovedAccountsId().contains(accountId))) {
+		if (amount <= 0 ) {
+			System.out.println("Please enter a positive amount");
+			return false;
+		}
+		
+		if (!(dao.getAllApprovedAccountsId().contains(accountId))) {
 			return false;
 		}
 		
@@ -238,7 +243,13 @@ public class AccountManagementService implements Service {
 	}
 	
 	public boolean withdraw(int accountId, double amount) throws SQLException {
-		if (amount <= 0 || !(dao.getAllApprovedAccountsId().contains(accountId))) {
+		if (amount <= 0) { 
+			System.out.println("Please enter a positive amount");
+			return false;
+		}
+		
+		if (!(dao.getAllApprovedAccountsId().contains(accountId))) {
+			System.out.println(accountId + " is not an approved account");
 			return false;
 		}
 		
@@ -251,7 +262,12 @@ public class AccountManagementService implements Service {
 		Connection con = ConnectionUtility.getConnection();
 		dao.setConnection(con);
 		
-		if (amount <= 0 || !(dao.getAllApprovedAccountsId().contains(targetAccountId)) || accountId == targetAccountId) {
+		if (amount <= 0) {
+			System.out.println("Please enter a positive amount");
+			return false;
+		}
+		
+		if ((!(dao.getAllApprovedAccountsId().contains(targetAccountId)) || accountId == targetAccountId)) {
 			return false;
 		}
 		

@@ -50,6 +50,7 @@ public class AccountManagementServiceTest {
 		service = new AccountManagementService(bankAccountDAO, "ManageMoney_deposit", "Customer");
 		
 		when(bankAccountDAO.deposit(anyInt(), anyInt())).thenReturn(true);
+		when(bankAccountDAO.getAllApprovedAccountsId()).thenReturn(Arrays.asList(1));
 		
 		assertTrue(service.deposit(1, 1000));
 		assertFalse(service.deposit(1, 0));
@@ -61,6 +62,8 @@ public class AccountManagementServiceTest {
 		
 		when(bankAccountDAO.withdraw(eq(1), gt(3500.0))).thenReturn(false);
 		when(bankAccountDAO.withdraw(eq(1), leq(3500.0))).thenReturn(true);
+		
+		when(bankAccountDAO.getAllApprovedAccountsId()).thenReturn(Arrays.asList(1));
 		
 		assertFalse(service.withdraw(1, 3501));
 		assertFalse(service.withdraw(1, -1000));

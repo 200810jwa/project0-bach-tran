@@ -16,7 +16,6 @@ INSERT INTO users
 VALUES 
 ('admin', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'John', 'Doe', '512-271-1622', 'admin@bank.com', 'Admin'),
 ('employee1', 'b822f1cd2dcfc685b47e83e3980289fd5d8e3ff3a82def24d7d1d68bb272eb32', 'Bob', 'Smith', '512-271-7568', 'employee1@bank.com', 'Employee'),
-('bach_tran', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'Bach', 'Tran', '512-826-2486', 'bach_tran@outlook.com', 'Customer'),
 ('jane_doe', '166ba22f5313a8d0df0b41fc19e5dfefd91ddc5d16e8b7eb071db111ed2b196e', 'Jane', 'Doe', '512-271-1623', 'jane_doe@outlook.com', 'Customer'),
 ('john_doe', '4663fe0c1d68b2e8cd1a6c1df668e637c99ca34002e1d126d944aecd45179abf', 'John', 'Doe', '512-826-2487', 'john_doe@outlook.com', 'Customer');
 
@@ -30,7 +29,6 @@ CREATE TABLE bankaccounts (
 INSERT INTO bankaccounts 
 (balance) 
 VALUES
-(0),
 (0),
 (0),
 (0);
@@ -56,10 +54,10 @@ CREATE TABLE user_account_join (
 INSERT INTO user_account_join 
 (user_id, account_id, approved, pending)
 VALUES
+(3, 2, false, true),
 (4, 2, false, true),
-(5, 2, false, true),
-(1, 3, false, true),
-(2, 4, false, true);
+(1, 1, false, true),
+(2, 3, false, true);
 
 -- transfer_funds Function
 CREATE OR REPLACE FUNCTION transfer_funds (
